@@ -1,0 +1,39 @@
+p{
+ text-align: center;
+ color :blue;
+}
+
+.P1-Child-1-para{
+    text-align: center;
+    color :blue;
+}
+
+.P1-Child-1 p{
+    text-align: center;
+    color :blue;
+}
+
+.P1-Child-1 .P1-Child-1-para{
+    text-align: center;
+    color :blue;
+}
+
+.parent1 p{
+    text-align: center;
+    color :blue;
+}
+
+.parent .P1-Child-1-para{
+    text-align: center;
+    color :blue;
+}
+
+.parent .parent1 .P1-Child-1 .P1-Child-1-para{
+    text-align: center;
+    color :blue;
+}
+
+h1{
+    text-align: center;
+    color :blue;
+}

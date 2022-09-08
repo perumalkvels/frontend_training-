@@ -1,0 +1,29 @@
+
+.h1 {
+    color: rgb(0, 158, 150);
+    text-align: center;
+
+}
+
+p {
+    color: rgb(0, 138, 57);
+}
+
+ul {
+    font-size: 20px;
+    color: rgb(28, 15, 206);
+}
+
+.head1 {
+    font-size: 25px;
+    color: brown;
+}
+
+.head2 {
+    font-size: 30px;
+    color: rgb(67, 37, 199);
+}
+ol{
+    font-size: 30px;
+    color: rgb(67, 37, 199); 
+}
