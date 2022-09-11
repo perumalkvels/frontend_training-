@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+}
+.main{
+    margin-left:6%;
+    margin-top:20px;
+    display: inline-block;
+    width: 1200px;
+    height: 600px;
+}
+
+.child1, .child2, .child3, .child4, .child4, .child5, .child6, .child7, .child8, .child9, .child10, .child11, .child12{
+    display: inline-block;
+    width: 7.69531%;
+    height: 100%;
+    background-color: lightpink;
+    border-left:2px solid lightskyblue;
+    border-right:2px solid lightskyblue;
+}
+

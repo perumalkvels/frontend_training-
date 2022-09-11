@@ -1,0 +1,32 @@
+*{
+    padding:0;
+    margin:0;
+}
+.maindiv1{
+    margin-top:50px;
+    margin-left:202px;
+    display: inline-block;
+    width: 962px;
+    height: 229px;
+}
+.div1,.div2,.div3{
+    margin-left:50px;
+    display: inline-block;
+    width: 250px;
+    height: 225px;
+    border:2px solid rgb(0, 102, 255);
+}
+.maindiv2{
+    margin-top:10px;
+    margin-left:202px;
+    display: inline-block;
+    width: 962px;
+    height: 229px;
+}
+.div4, .div5, .div6{
+    margin-left:50px;
+    display: inline-block;
+    width: 250px;
+    height: 225px;
+    border:2px solid rgb(0, 102, 255);
+}
