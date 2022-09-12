@@ -1,16 +1,18 @@
+/*intialize margin and padding  to 0 */
 *{
     margin:0;
     padding:0;
 }
+/*styling a parent class*/
 .main{
     margin-left:6%;
-    margin-top:20px;
+    margin-top:2%;
     display: inline-block;
     width: 1200px;
     height: 600px;
 }
-
-.child1, .child2, .child3, .child4, .child4, .child5, .child6, .child7, .child8, .child9, .child10, .child11, .child12{
+/*styling a child class*/
+.child{
     display: inline-block;
     width: 7.69531%;
     height: 100%;

@@ -1,31 +1,16 @@
-.img1 {
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-bottom: 20px;
+/*img1 and img2 classes with 
+same property name with same value*/
+
+.img1, .img2  {
+    margin: 20px 100px;
     background-color: rgb(8, 177, 255);
     border: 10px solid blue;
     height: 300px;
     width: 300px;
 }
 
-.img1 p {
+/* style p tags */
 
-    margin-left: 10px;
-
-}
-
-.img2 {
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-bottom: 20px;
-    background-color: rgb(8, 177, 255);
-    border: 10px solid blue;
-    height: 300px;
-    width: 300px;
-}
-
-.img2 p {
+.img1 p,.img2 p {
     margin-left: 10px;
 }
