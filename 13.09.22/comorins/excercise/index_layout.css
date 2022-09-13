@@ -1,0 +1,29 @@
+
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            text-align: center;
+            color:white;
+        }
+        header{
+            background-color: rgb(61, 61, 61);
+            padding:30px;
+        }
+        nav{
+            margin-top:5px;
+            padding:30px;
+            background-color: rgb(97, 97, 97);
+        }
+        section{
+            margin-top:5px;
+            padding-top:75px;
+            padding-bottom:200px;
+            background-color: gray;
+        }
+        footer{
+            margin-top:7px;
+            padding:20px;
+            background-color: rgb(97, 97, 97);
+        }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Form Page</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Main Container-->
+    <div class="maincontainer">
+
+        <!--Header navigator-->
+        <div class="index-navigator">
+            <ul>
+            <li><a href="index.html">Basic Tags</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="diaplay.html">Display</a></li>
+            <li><a href="frame.html">iframe</a></li>
+            </ul>
+        </div>
+        
+    <!--Initiate the form contents-->     
+    <form class="formcontents">
+
+
+        <label>First Name :</label>
+        <input class="boxtype" type="text" name="firstname" />
+        <br />
+        <br />
+        <label>Last Name:</label>
+        <input class="boxtype" type="text" name="firstname" />
+        <br />
+        <br />
+        <label>Color:</label>
+        <input class="color" type="color" />
+        <br />
+        <br />
+        <label>Mobile:</label>
+        <input class="boxtype" type="number" name="mobile" />
+        <br />
+        <br />
+        <label>Email:</label>
+        <input class="boxtype" type="email" name="email" />
+        <br />
+        <br />
+        
+        <!--Radio Button Declaration-->
+        <label>Tecknology:</label>
+        <input type="radio" name="technology">Frontend Technology
+        <input type="radio" name="technology">Backend Technology
+        <input type="radio" name="technology">Database Struturer
+        <br />
+        <br />
+
+        <!--Check Box Declaration-->
+        <label>Languages:</label>
+        <input type="checkbox" name="Languages" value="html">HTML
+        <input type="checkbox" name="Languages" value="css">CSS
+        <input type="checkbox" name="Languages" value="Javascript">Javascript
+        <input type="checkbox" name="Languages" value="python">Python
+        <input type="checkbox" name="Languages" value="java">Java
+        <input type="checkbox" name="Languages" value="php">PHP
+        <input type="checkbox" name="Languages" value="oracle">Oracle
+        <input type="checkbox" name="Languages" value="sql">SQL
+        <input type="checkbox" name="Languages" value="mysql">MySQL
+        <br />
+        <br />
+
+        <!--Text Area Declaration -->
+        <label>Message:</label>
+        <textarea rows="2" cols="35">Sample textarea contents</textarea>
+        <br />
+        <br />
+
+        <!--Button Declaration -->
+        <input class="button" type="button" value="submit">
+    </form>
+    </div>
+</body>
+
+</html>
