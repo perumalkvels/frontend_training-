@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+header {
+    margin:5px;
+    background-color: #504e4e;
+    padding: 25px;
+}
+
+nav {
+    padding:20px;
+    margin:5px;
+    background-color:#3c3c3c;
+}
+
+section {
+    margin:5px;
+    background-color: gray;
+    overflow: hidden;
+}
+
+.slideshow{
+    margin:25px 10px;
+    padding:100px;
+    background-color: #2e2e2e;
+    }
+
+.gird {
+    margin-top:70px;
+
+}
+
+.column {
+    display: inline-block;
+    background-color: white;
+    width: 32%;
+    height: 300px;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-bottom:20px;
+    
+}
+footer{
+    text-color:white;
+    margin:10px;
+    background-color: #2e2e2e;
+    padding:100px;
+
+}
