@@ -1,14 +1,19 @@
+/* Init Property & Value... */
 *{
     margin:0;
     padding:0;
 
 }
+
+/* Header Division Styling */
 header{
     color:#fff;
     background-color: rgb(58, 58, 58);
     text-align: center;
     padding:2%;
 }
+
+/* Navigation Division Styling */
 nav{
     color:#fff;
     background-color: rgb(88, 88, 88);
@@ -16,8 +21,9 @@ nav{
 }
 nav h2{
     margin-left: 8%;
-    
 }
+
+/* Section Division Styling */
 section{
     
     width:70%;
@@ -25,7 +31,7 @@ section{
     margin:15px auto;
     
 }
-.maincontent{
+.mainbar{
     color:black;
     width: 70%;
     height:600px;
@@ -34,7 +40,7 @@ section{
     text-align:center;
     margin-right:1.5%;
 }
-.maincontent h2{
+.mainbar h2{
     padding:250px 0;
 }
 .sidebar{
@@ -47,6 +53,8 @@ section{
 .sidebar h2{
     padding:250px 0;
 }
+
+/* Footer Division Styling */
 footer{
 text-align: center;;
     color:#fff;

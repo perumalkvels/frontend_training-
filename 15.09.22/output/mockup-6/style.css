@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.banner{
+    width: 100%; 
+}
+
+nav {
+    width: 100%;
+    height: 129px;
+    background: #333333;
+}
+
+ul {    
+    text-align:center;
+}
+
+header li {
+    display: inline-block;
+    color: white;
+    font-size: 27px;
+    padding: 48px 32px;
+}
+.headintro{
+    width:100%;
+    height: 209px;
+    background: #ffffff;
+    display:table;
+    /* border: 1px solid #000000;
+    box-shadow: 0px 4px 29px rgba(111, 111, 111, 0.25); */
+}
+.headintro img{
+    display:table-cell; 
+    vertical-align: middle;
+    margin:20px 35px;
+}
+.headintro .headcontents{
+    padding-right:20px;
+    text-align:right;
+    display:table-cell;
+    vertical-align: middle;
+    margin-right:20px;
+}
+.headcontents .text1{
+    padding-bottom:25px;
+}
+.section1 {
+    width: 100%;
+    height: 737px;
+    background-color: antiquewhite;
+}
+.section1 .box1 {
+    text-align: center;
+    width: 33.13%;
+    background-color: antiquewhite;
+    display: inline-block;
+}
+.box1 h2{
+padding-top:72px;
+}
+.box1 .img1 {
+    margin-top:25px;
+    width: 369px;
+    height : 278px;
+    padding: 12px 16px;
+    border: 1px solid black;
+    
+}
+.box1 .img2 {
+    margin-top:49px;
+    Width: 355px;
+    Height: 160px;
+}
+.box1 li{
+    text-decoration: none;
+    list-style-type: none;
+    color: #6D9D34;
+    font-size: 27px;
+    padding: 31px 155px 28px 0px;
+    
+}
+
+
+.section2{
+    width:100%;
+    height:922px;
+}
+.mainbar{
+    width:60%;
+    height:922px;
+    display:inline-block;
+}
+.galery{
+    margin-top:97px;
+    width: 100%;
+}
+.galery img{
+    width:183px;
+    height:152px;
+    padding-left:54px;
+}
+
+.sidebar{
+    width:39.7%;
+    height:922px;
+    display:inline-block;
+    vertical-align: top;
+}
+.headcolumn{
+    text-align: center;
+    margin-top:50px;
+    height: 100px;
+    border-bottom:1px solid black;
+    
+}
+.column1{
+    width:100%;
+
+    border-bottom:1px solid black;
+    display:table;
+    padding:10px;
+}
+.column1 .img{
+    width:164px;
+    height:135px;
+    padding: 15px 19px;
+    border:1px black solid;
+    display:table-cell;
+
+}
+.column1 .sidebarcontents{
+    width:102;
+    padding:25px;
+    display:table-cell;
+    vertical-align: top;
+}
+.sidebarcontents h2{
+    margin-bottom:10px;
+}
+.sidebarcontents li{
+    margin-left:40px;
+    margin-top:20px;
+    font-size: 24px;
+}
+.splitbox{
+    width:100%;
+}
+.splitbox .row1{
+    width:100%;
+    margin-top:134px;
+    margin-bottom:30px;
+
+}
+.splitbox .row2{
+    font-size:20px;
+    width:100%;
+    display:table;
+}
+.splitbox .row2 img{
+width:202px;
+height:170px;
+padding:17px 20px;
+border:1px solid black;
+display:table-cell;
+}
+.splitbox .row2 .content{
+    text-align:justify;
+    padding:0 20px;
+    display:table-cell;
+    vertical-align: top;
+    }
+    .splitbox .row2 .content h3{
+        margin-bottom:20px;
+    }
+    .splitbox .row2 .content p{
+        margin-bottom:20px;
+    }
+
+    .splitbox b{
+        text-align: left;
+        width:90%;
+        padding: 20px;
+        font-size:16px;
+    }
+.section3{
+    color:white;
+    width:100%;
+    height:554px;
+    background-color: #333333;
+}
+.gird{
+        /* margin-top: 10px; */
+        padding: 30px;
+        width: 100%;
+        
+}
+.aboutus{
+   
+    overflow: hidden;
+    margin-top:63px;
+    width:40%;
+    height:400px;
+    display:table;
+    float:left;
+}
+.gird .aboutus h1{
+    text-align: center;
+    border-bottom:1px solid #fff;
+    margin-bottom:20px;
+}
+.aboutus img{
+    
+    height:242px;
+    width:205px;
+    padding:11px 13px;
+    border:1px solid white;
+    display:table-cell;
+}
+.aboutus .contents{
+    text-align: left;
+    padding:0px 20px;
+    width:60%;
+    display:table-cell;
+    vertical-align: middle;
+}
+.aboutus .contents h3{
+    margin-bottom:20px;
+}
+
+.aboutus .contents p{
+    margin-bottom:20px;
+}
+.lastimages{
+    width:30%;
+    float:left;
+}
+.column .row1{
+    margin-top: 100px;
+    padding-left:20px;
+    }
+.column .row2{
+    margin-top: 60px;
+    padding-left:20px;
+}
+.contactdetails{
+    width:30%;
+    text-align:left;
+    float:left;
+    margin-top: 100px;
+    font-size: 20px;
+}
+.contactdetails p{
+    padding-bottom:10px;
+}

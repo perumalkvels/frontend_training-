@@ -1,0 +1,108 @@
+/* Init Property & Value... */
+*{
+    padding:0;
+    margin:0;
+    
+}
+header{
+    font-family: arial;
+}
+/* Header Division Styling */
+header .title{
+    padding:2.5%;
+    background-color: rgb(216, 216, 216);
+    color:white;
+    text-align:center;
+}
+.title h1{
+    padding-top:1.5%;
+    background-color: rgb(216, 216, 216);
+    color:black;
+    text-align:center;
+}
+.title p{
+    color:black;
+    margin-top:10px;
+}
+nav{
+    padding:1.1%;
+    background-color:black;
+}
+nav ul{
+    color:white;
+}
+nav li{
+    padding-left:2%;
+    display:inline;   
+}
+.lastlink{
+    margin-left:80%;
+    color:white;
+    display:inline;
+}
+
+/* Section Division Styling */
+section{
+    
+    margin-top:.7%;
+    background-color:darkgray;
+}
+.mainbar{
+    width:70%;
+    background-color:darkgray;
+    display:inline-block;
+}
+.container1{
+    padding:15px;
+}
+.imgbox1{
+    height:150px;
+    background-color: darkgrey;
+    margin:10px 0px;
+}
+.container2{
+    padding:15px;
+}
+.imgbox2{
+    height:60px;
+    background-color: darkgrey;
+    margin:5px 0px;
+}
+
+.maintaskflow1{
+    margin-top:1.4%;
+    background-color: white;
+}
+.maintaskflow2{
+    margin-top:1%;
+    background-color:white;
+}
+.sidebar{
+    margin-left:.6%;
+    margin-top:1%;
+    width:29%;
+    display:inline-block;
+    vertical-align: top;
+}
+.sidetaskflow1{
+    background-color:white;
+    margin-bottom:5px;
+}
+.sidetaskflow2{
+    margin-top:2%;
+    background-color:white;
+}
+.sidetaskflow3{
+    margin-top:2%;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Footer Division Styling */
+.footerclass{
+    background-color: rgb(255, 254, 254);
+    margin-top:1%;
+}
+.footerclass h2{
+    text-align:center;
+    padding:20px;
+}

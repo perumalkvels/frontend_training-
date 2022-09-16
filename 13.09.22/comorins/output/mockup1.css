@@ -1,52 +1,70 @@
+/* Init Property & Value... */
 * {
+    padding: 0;
     margin: 0;
+    font-family: arial;
+    color: white;
     text-align: center;
-    color: #fff;
 }
 
+.container{
+    padding:1%;
+}
+
+/* Header Division Styling */
 header {
-    margin:5px;
-    background-color: #504e4e;
-    padding: 25px;
+    margin-bottom: .3%;
 }
-
+.mainhead {
+    background-color: rgb(66, 66, 66);
+}
+.mainhead h1 {
+    padding: 3% 45%;
+    margin-bottom: .4%;
+}
 nav {
-    padding:20px;
-    margin:5px;
-    background-color:#3c3c3c;
+    background-color: rgb(102, 102, 102);
+    margin-bottom: .4%;
+}
+nav h2 {
+    padding: .6% 0;
 }
 
+/* Section Division Styling */
 section {
-    margin:5px;
-    background-color: gray;
+    background-color: rgb(164, 164, 164);
     overflow: hidden;
+    margin-bottom:.4%;
 }
-
-.slideshow{
-    margin:25px 10px;
-    padding:100px;
-    background-color: #2e2e2e;
-    }
-
+.slideshow {
+    width:96%;
+    margin-top:2%;
+    margin-left:2%;
+    background-color: rgb(110, 110, 110);
+}
+.slideshow h2 {
+    padding:5%;
+}
 .gird {
-    margin-top:70px;
-
+    margin:2% 2%;
+    height:300px;
 }
-
 .column {
-    display: inline-block;
-    background-color: white;
-    width: 32%;
-    height: 300px;
-    margin-right: 10px;
-    margin-left: 5px;
-    margin-bottom:20px;
-    
+    margin-right:2%;
+    width:31.7%;
+    height:300px;
+    background-color: #fff;
+    display:inline-block;
 }
-footer{
-    text-color:white;
-    margin:10px;
-    background-color: #2e2e2e;
-    padding:100px;
+.column:last-child {
+    margin-right:0;
+}
 
+/* Footer Division Styling */
+footer {
+    background-color: gray;
 }
+footer h2 {
+    padding:2% 0;
+}
+
