@@ -1,0 +1,612 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray;
+    width:100%;
+}
+/* Container Block */
+.container {
+    height:98%;
+    width: 98%;
+    margin:1% 1%;
+}
+header {
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+.headtitle h1 {
+    margin-top:4%;
+    font-size: 45px;
+}
+.headtitle p {
+    font-size:18px;
+    margin: 2% 0%;
+}
+nav {
+    width: 100%;
+    margin-top:3.5%;
+    font-size: 15px;
+    background-color: rgb(43, 43, 43);
+}
+ul {
+    text-align: center;
+}
+.navlist li {
+    padding: 10px 20px;
+    color: white;
+}
+section {
+    margin-top:1%;
+    width: 96%;
+    margin:3% auto;
+    }
+    
+    /* Mainbar Section */
+    .mainbar {
+        margin:0 auto; 
+    }
+    .mainblock1 {
+        padding: 3%;
+        background-color: white;
+        margin-bottom: 2%;
+    }
+    .mainblock1 h1{
+        font-size:15px;
+        margin:1% 0%;
+    }
+    .mainblock1 p{
+        font-size:15px;
+        margin:1% 0%;
+    }
+    .mainblock1 h2{
+        font-size:16px;
+        margin:1% 0%;
+    }
+    .mainblock1 .imgdiv{
+
+        width:100%;
+        overflow: hidden;
+    }
+    .imgdiv img{
+        width:100%;
+        background-position: center;
+        background-color: gray;
+    }
+    
+    /* Sidebar Section */
+    .sidebar {
+        vertical-align:top;
+    }
+    
+    /* Sideblock - 1 */
+    .sideblock1{
+        padding:4%;
+        background-color:white;
+        margin-bottom:2%;
+    }
+    .sideblock1 h2{
+        margin:1% 0% 2% 0%;
+        font-size:20px;
+    }
+    .sideblock1 .imgdiv1{
+        margin:1% 0%;
+        width:100%;
+        height:100px;
+        overflow: hidden;
+        background-color: aqua;
+    }
+    .imgdiv1 img{
+        height:150px;
+        width:100%;
+        background-position: bottom;
+        background-color: gray;
+    }
+    .sideblock1 p{
+        margin:1% 0%;
+        font-size:15px;
+    }
+    
+    /* Sideblock - 2 */
+    .sideblock2{
+        margin-top:3px;
+        padding:4%;
+        padding-bottom:4%;
+        background-color: white;
+        margin-bottom:2%;
+    }
+    .sideblock2 h2{
+        margin:2% 0%;
+        font-size:20px;
+    }
+    
+    /* Sideblock - 3 */
+    .sideblock3{
+        padding:1%;
+        background-color: white;
+    } 
+    .sideblock3 h2{
+        margin:2%;
+        font-size:20px;
+    }
+    .sideblock3 p{
+        margin:1% 3%;
+        font-size:15px;
+    }
+    footer{
+        text-align: center;
+    }
+    footer h2{
+        font-size:20px;
+        padding:3% 0%;
+        background-color: white;
+    }
+@media (min-width:575px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: darkgray;
+        width:100%;
+    }
+    /* Container Block */
+    .container {
+        height:98%;
+        width: 98%;
+        margin:1% 1%;
+    }
+    header {
+        text-align: center;
+        background-color: white;
+        overflow: hidden;
+    }
+    .headtitle h1 {
+        margin-top:4%;
+        font-size: 45px;
+    }
+    .headtitle p {
+        font-size:18px;
+        margin: 2% 0%;
+    }
+    nav {
+        width: 100%;
+        margin-top:3.5%;
+        font-size: 15px;
+        background-color: rgb(43, 43, 43);
+    }
+    ul {
+        text-align: center;
+    }
+    .navlist li {
+        padding: 10px 20px;
+        color: white;
+        display: inline-block;
+    }
+    section {
+        margin-top:1%;
+        width: 96%;
+        margin:3% auto;
+        }
+        
+        /* Mainbar Section */
+        .mainbar {
+            margin:0 auto; 
+        }
+        .mainblock1 {
+            padding: 3%;
+            background-color: white;
+            margin-bottom: 2%;
+        }
+        .mainblock1 h1{
+            font-size:15px;
+            margin:1% 0%;
+        }
+        .mainblock1 p{
+            font-size:15px;
+            margin:1% 0%;
+        }
+        .mainblock1 h2{
+            font-size:16px;
+            margin:1% 0%;
+        }
+        .mainblock1 .imgdiv{
+            margin:1% 0%;
+            width:100%;
+            height:200px;
+            overflow: hidden;
+            background-color: aqua;
+        }
+        .imgdiv img{
+            width:100%;
+            background-position: center;
+            background-color: gray;
+        }
+        
+        /* Sidebar Section */
+        .sidebar {
+            vertical-align:top;
+        }
+        
+        /* Sideblock - 1 */
+        .sideblock1{
+            padding:4%;
+            background-color:white;
+            margin-bottom:2%;
+        }
+        .sideblock1 h2{
+            margin:1% 0% 2% 0%;
+            font-size:20px;
+        }
+        .sideblock1 .imgdiv1{
+            margin:1% 0%;
+            width:100%;
+            height:100px;
+            overflow: hidden;
+            background-color: aqua;
+        }
+        .imgdiv1 img{
+            height:150px;
+            width:100%;
+            background-position: bottom;
+            background-color: gray;
+        }
+        .sideblock1 p{
+            margin:1% 0%;
+            font-size:15px;
+        }
+        
+        /* Sideblock - 2 */
+        .sideblock2{
+            margin-top:3px;
+            padding:4%;
+            padding-bottom:4%;
+            background-color: white;
+            margin-bottom:2%;
+        }
+        .sideblock2 h2{
+            margin:2% 0%;
+            font-size:20px;
+        }
+        
+        /* Sideblock - 3 */
+        .sideblock3{
+            padding:1%;
+            background-color: white;
+        } 
+        .sideblock3 h2{
+            margin:2%;
+            font-size:20px;
+        }
+        .sideblock3 p{
+            margin:1% 3%;
+            font-size:15px;
+        }
+        footer{
+            text-align: center;
+        }
+        footer h2{
+            font-size:20px;
+            padding:3% 0%;
+            background-color: white;
+        }
+    
+}
+@media (min-width:767px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: darkgray;
+        width:100%;
+    }
+    /* Container Block */
+    .container {
+        height:98%;
+        width: 98%;
+        margin:1% 1%;
+    }
+/* Header Section */
+header {
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+.headtitle h1 {
+    margin-top:4%;
+    font-size: 50px;
+}
+.headtitle p {
+    font-size:20px;
+    margin: 2% 0%;
+}
+    nav {
+        width: 100%;
+        margin-top:3.5%;
+        font-size: 18px;
+        background-color: rgb(43, 43, 43);
+    }
+    ul {
+        text-align: center;
+    }
+    .navlist li {
+        
+        padding: 10px 10px;
+        color: white;
+        display: inline-block;
+    }
+    
+/* Section Division Starts */
+section {
+    width:100%;
+    margin-top:1%;
+    overflow:hidden;
+    }
+    
+    /* Mainbar Section */
+    .mainbar {
+        width: 74.5%;
+        display:inline-block;
+    }
+    .mainblock1 {
+        padding: 1.5%;
+        background-color: white;
+        margin-bottom: 1.5%;
+    }
+    .mainblock1 h1{
+        font-size:20px;
+        margin:1% 0%;
+    }
+    .mainblock1 p{
+        font-size:12px;
+        margin:1% 0%;
+    }
+    .mainblock1 h2{
+        font-size:16px;
+        margin:1% 0%;
+    }
+    .mainblock1 .imgdiv{
+        margin:1% 0%;
+        width:100%;
+        height:200px;
+        overflow: hidden;
+        background-color: aqua;
+    }
+    .imgdiv img{
+        width:100%;
+        background-position: center;
+        background-color: gray;
+    }
+    
+    /* Sidebar Section */
+    .sidebar {
+        vertical-align:top;
+        margin-left:.4%;
+        width: 24.3%;
+        display:inline-block;
+    }
+    
+    /* Sideblock - 1 */
+    .sideblock1{
+        padding:4% 3%;
+        background-color:white;
+        margin-bottom:5%;
+    }
+    .sideblock1 h2{
+        margin:10% 0% 5% 0%;
+        font-size:20px;
+    }
+    .sideblock1 .imgdiv1{
+        margin:3% 0%;
+        width:100%;
+        height:80px;
+        overflow: hidden;
+        background-color: aqua;
+    }
+    .imgdiv1 img{
+        height:80px;
+        width:100%;
+        background-position: bottom;
+        background-color: gray;
+    }
+    .sideblock1 p{
+        margin:3% 0%;
+        font-size:12px;
+    }
+    
+    /* Sideblock - 2 */
+    .sideblock2{
+        margin-top:3px;
+        padding:4%;
+        padding-bottom:8%;
+        background-color: white;
+        margin-bottom:4%;
+    }
+    .sideblock2 h2{
+        margin:6% 0%;
+        font-size:20px;
+    }
+    
+    /* Sideblock - 3 */
+    .sideblock3{
+        padding:3%;
+        background-color: white;
+    } 
+    .sideblock3 h2{
+        margin:5%;
+        font-size:20px;
+    }
+    .sideblock3 p{
+        margin:4%;
+        font-size:15px;
+    }
+    footer{
+        text-align: center;
+        overflow:hidden;
+    }
+    footer h2{
+        overflow:hidden;
+        font-size:20px;
+        padding:3% 0%;
+        background-color: white;
+    }
+}  
+
+@media (min-width:1200px) {
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray;
+    width:100%;
+}
+
+/* Container Block */
+.container {
+    height:98%;
+    width: 98%;
+    margin:1% 1%;
+}
+/* Header Section */
+header {
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+.headtitle h1 {
+    margin-top:4%;
+    font-size: 60px;
+}
+.headtitle p {
+    font-size:25px;
+    margin: 3% 0% 5% 0%;
+}
+/* Navigator Section */
+nav {
+    width: 100%;
+    margin-top:3%;
+    font-size: 25px;
+    text-align: left;
+    background-color: rgb(43, 43, 43);
+}
+ul {
+    text-align: center;
+}
+.navlist li {
+    margin-right: 40px;
+    padding: 10px 0;
+    color: white;
+    display: inline-block;
+}
+.navlist :last-child {
+    margin-right: 20px;
+    margin-left: 60%;
+}
+
+/* Section Division Starts */
+section {
+margin-top:1%;
+}
+
+/* Mainbar Section */
+.mainbar {
+    width: 75%;
+    display:inline-block;
+}
+.mainblock1 {
+    padding: 1.5%;
+    background-color: white;
+    margin-bottom: 1.5%;
+}
+.mainblock1 h1{
+    font-size:30px;
+    margin:1% 0%;
+}
+.mainblock1 p{
+    font-size:20px;
+    margin:1% 0%;
+}
+.mainblock1 .imgdiv{
+    margin:1% 0%;
+    width:100%;
+    height:350px;
+    overflow: hidden;
+}
+.imgdiv img{
+    width:100%;
+    background-position: center;
+    background-color: gray;
+}
+
+/* Sidebar Section */
+.sidebar {
+    vertical-align:top;
+    margin-left:.6%;
+    width: 24%;
+    display:inline-block;
+}
+
+/* Sideblock - 1 */
+.sideblock1{
+    padding:4% 3%;
+    background-color:white;
+    margin-bottom:5%;
+}
+.sideblock1 h2{
+    margin:15% 0% 5% 0%;
+    font-size:30px;
+}
+.sideblock1 .imgdiv1{
+    margin:3% 0%;
+    width:100%;
+    height:150px;
+    overflow: hidden;
+}
+.imgdiv1 img{
+    width:100%;
+    background-position: bottom;
+    background-color: gray;
+}
+.sideblock1 p{
+    margin:8% 0%;
+    font-size:20px;
+}
+
+/* Sideblock - 2 */
+.sideblock2{
+    margin-top:10px;
+    padding:4%;
+    padding-bottom:10%;
+    background-color: white;
+    margin-bottom:5%;
+}
+.sideblock2 h2{
+    margin:9% 0%;
+    font: size 25px;
+}
+
+/* Sideblock - 3 */
+.sideblock3{
+    padding:3%;
+    background-color: white;
+} 
+.sideblock3 h2{
+    margin:5%;
+    font: size 25px;
+}
+.sideblock3 p{
+    margin:10%;
+    font-size:20px;
+}
+/* Section Division Finished */
+
+
+/* Footer Division Started */
+footer{
+    text-align: center;
+}
+footer h2{
+    font-size:30px;
+    padding:3% 0%;
+    background-color: white;
+}
+/* Footer Division Finished */
+
+}  

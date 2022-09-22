@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding:0;
+}
+@media(min-width:575) {}
+
+@media(min-width:766px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: darkgray;
+    }
+    .container {
+        font-size:15px;
+        width: 96%;
+        margin:2% auto;
+    }
+    header {
+        
+        text-align: center;
+        background-color: white;
+        overflow:hidden;
+    }
+    .headtitle{
+        font-size:12px;
+        margin-top:5%;
+    }
+    .headtitle h1{
+        margin-bottom :4%;
+    }
+    nav {
+        width: 100%;
+        margin-top:5%;
+        font-size: 14px;
+        background-color: rgb(43, 43, 43);
+    }
+    ul {
+        text-align: center;
+    }
+    .navlist li {
+        padding: 10px 10px;
+        color: white;
+        display: inline-block;
+    }
+    section {
+        margin-top:1%;
+        }
+        .mainbar {
+            width: 74%;
+            display:inline-block;
+        }
+        .sec1 {
+            padding: 1.5%;
+            background-color: white;
+            margin-bottom: 1%;
+        }
+        .sec1 .imgdiv {
+            padding: 10%;
+            background-color: gray;
+        }
+        .sec1 h1,p{
+            padding:1% 0%;
+        }
+        .sidebar {
+            vertical-align:top;
+            margin-left:.6%;
+            width: 23.9%;
+            display:inline-block;
+        }
+        .sidebar .sec1{
+            padding:2% 2%;
+            background-color:white;
+            margin-bottom:4%;
+        }
+        .sidebar .sec1 .imgdiv1{
+            margin:10px 5px;
+            padding:10% 20%;
+            background-color: darkgray;
+        }
+        .sidebar .sec2{
+            margin-top:10px;
+            padding:4%;
+            background-color: white;
+            margin-bottom:4%;
+        }
+        .sidebar .sec2 .imgdiv1{
+            padding:10% 20%;
+            background-color: darkgray;
+        }
+        .sidebar .sec3{
+            padding:4%;
+            background-color: white;
+        } 
+        .sidebar .sec3 h2{
+            margin:3%;
+        }
+        footer{
+            width:98%;
+            text-align: center;
+        }
+        footer h2{
+            padding:3% 0%;
+            margin-left:2%;
+            background-color: white;
+        }
+}  
+
+@media (min-width:1200px) {
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray;
+    width:100%;
+}
+
+/* Container Block */
+.container {
+    height:98%;
+    width: 98%;
+    margin:1% 1%;
+}
+/* Header Section */
+header {
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+.headtitle h1 {
+    margin-top:4%;
+    font-size: 60px;
+}
+.headtitle p {
+    font-size:25px;
+    margin: 2% 0%;
+}
+/* Navigator Section */
+nav {
+    width: 100%;
+    margin-top:3%;
+    font-size: 25px;
+    text-align: left;
+    background-color: rgb(43, 43, 43);
+}
+ul {
+    text-align: center;
+}
+.navlist li {
+    margin-right: 40px;
+    padding: 10px 0;
+    color: white;
+    display: inline-block;
+}
+.navlist :last-child {
+    margin-right: 20px;
+    margin-left: 60%;
+}
+
+/* Section Division Starts */
+section {
+margin-top:1%;
+}
+
+/* Mainbar Section */
+.mainbar {
+    width: 75%;
+    display:inline-block;
+}
+.mainblock1 {
+    padding: 1.5%;
+    background-color: white;
+    margin-bottom: 1.5%;
+}
+.mainblock1 h1{
+    font-size:30px;
+    margin:1% 0%;
+}
+.mainblock1 p{
+    font-size:20px;
+    margin:1% 0%;
+}
+.mainblock1 .imgdiv{
+    margin:1% 0%;
+    width:100%;
+    height:350px;
+    overflow: hidden;
+}
+.imgdiv img{
+    width:100%;
+    background-position: center;
+    background-color: gray;
+}
+
+/* Sidebar Section */
+.sidebar {
+    vertical-align:top;
+    margin-left:.6%;
+    width: 24%;
+    display:inline-block;
+}
+
+/* Sideblock - 1 */
+.sideblock1{
+    padding:4% 3%;
+    background-color:white;
+    margin-bottom:5%;
+}
+.sideblock1 h2{
+    margin:15% 0% 5% 0%;
+    font-size:30px;
+}
+.sideblock1 .imgdiv1{
+    margin:3% 0%;
+    width:100%;
+    height:150px;
+    overflow: hidden;
+}
+.imgdiv1 img{
+    width:100%;
+    background-position: bottom;
+    background-color: gray;
+}
+.sideblock1 p{
+    margin:8% 0%;
+    font-size:20px;
+}
+
+/* Sideblock - 2 */
+.sideblock2{
+    margin-top:10px;
+    padding:4%;
+    padding-bottom:10%;
+    background-color: white;
+    margin-bottom:5%;
+}
+.sideblock2 h2{
+    margin:9% 0%;
+    font: size 25px;
+}
+
+/* Sideblock - 3 */
+.sideblock3{
+    padding:3%;
+    background-color: white;
+} 
+.sideblock3 h2{
+    margin:5%;
+    font: size 25px;
+}
+.sideblock3 p{
+    margin:10%;
+    font-size:20px;
+}
+/* Section Division Finished */
+
+
+/* Footer Division Started */
+footer{
+    text-align: center;
+}
+footer h2{
+    font-size:30px;
+    padding:3% 0%;
+    background-color: white;
+}
+/* Footer Division Finished */
+
+}

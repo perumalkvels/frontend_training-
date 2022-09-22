@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Initiated-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Gird System Basic</title>
+    <!-- Internal CSS -->
+    <style>
+        .box {
+            border: 2px solid white;
+            height: 250px;
+            Color: lightgreen;
+            background-color: blue;
+        }
+
+        .box1 {
+            border: 2px solid white;
+            height: 250px;
+            Color: lightgreen;
+            background-color: rgb(255, 0, 179);
+        }
+
+        .box2 {
+            border: 2px solid white;
+            height: 100px;
+            Color: lightgreen;
+            background-color: rgb(75, 214, 10);
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .box3 {
+            height: 100px;
+            width: 100px;
+            border: 2px solid white;
+        }
+
+        .yellow {
+            background-color: rgb(179, 255, 0);
+        }
+
+        .green {
+            background-color: rgb(0, 167, 31);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Container Class Declared  -->
+    <div class="container">
+
+        <h1>Basic Gird Division by "row and column" classes</h1>
+        <!-- Row class  -->
+        <div class="row">
+            <!-- 24 Column classes   -->
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+            <div class="box col">c </div>
+
+        </div>
+        <br />
+
+        <!--Another Container Class Declared  -->
+        <div class="container">
+            <h1>A Gird Should Splited by 12 Divisions</h1>
+            <!-- Row class  -->
+            <div class="row">
+                <div class="box1 col-5"> col5</div>
+                <div class="box1 col-7"> col12</div>
+            </div>
+            <br />
+
+            <!-- Row class  -->
+            <div class="row">
+                <div class="red box2  col-md-6 col-lg-4  col-xl-3"> </div>
+                <div class="blue box2  col-md-6 col-lg-4 col-xl-3"> </div>
+                <div class="red box2   col-md-6 col-lg-4  col-xl-3"> </div>
+                <div class="blue box2 col-md-6 col-lg-4  col-xl-3"> </div>
+            </div>
+            <br />
+
+            <div class="row">
+                <!-- here col-md-12 is not nessessory -->
+                <div class="green box3 col-md-12 col-md-6 col-lg-4  col-xl-3"> </div>
+                <div class="yellow box3 col-md-12 col-md-6 col-lg-4 col-xl-3"> </div>
+                <div class="green box3 col-md-12  col-md-6 col-lg-4  col-xl-3"> </div>
+                <div class="yellow box3 col-md-12 col-md-6 col-lg-4  col-xl-3"> </div>
+                <div class="green box3 col-md-12 col-md-6 col-lg-4  col-xl-3"> </div>
+                <div class="yellow box3 col-md-12 col-md-6 col-lg-4 col-xl-3"> </div>
+                <div class="green box3  col-md-12 col-md-6 col-lg-4  col-xl-3"> </div>
+                <div class="yellow box3 col-md-12 col-md-6 col-lg-4  col-xl-3"> </div>
+            </div>
+            <br />
+
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

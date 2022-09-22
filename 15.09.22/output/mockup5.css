@@ -102,21 +102,26 @@ header {
 }
 
 footer {
+    width:100%;
+    margin:0 auto;
     background-color: rgb(164, 164, 164);
 }
 
 footer .link {
+    width:40%;
     padding: 30px;
     margin-left: 6%;
     display: inline-block;
 }
 
 footer li {
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 23px;
     display: inline-block;
 }
-.link h3{
-    margin-right:20px;
+.copyright{
+    text-align: right;
+    width:40%;
+    margin-right:0;
     display:inline-block;
 }
