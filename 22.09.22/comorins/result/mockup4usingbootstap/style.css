@@ -3,17 +3,36 @@
     margin:0;
     font-family: Roboto;
  }
+ @media (min-width:768px){
+
+ }
+ .pm-0{
+    padding:0;
+    margin:0;
+ }
+ .navbar{
+    padding:4%;
+    font-size: 20px;
+ }
+ .section1{
+    
+    background: #F3F2EE;
+}
+.cardset{
+    padding:10% 3%;
+    background: #F3F2EE;
+}
+.cardset p{
+    text-align: justify;
+    font-size:20px;
+}
+ .column1{
+    border:none;
+ }
  .foot-heading{
     padding:15px;
     margin-bottom:20px;
     border-bottom:1px solid white;
- }
- .div1-img{
-    padding:10px;
-    margin-bottom:20px;
-    border:1px solid rgb(0, 0, 0);
-    width:100%;
-    height:225px;   
  }
  .h7{
     margin-bottom:3%;
@@ -33,7 +52,7 @@
  }
  .columntype3{
     border-bottom:1px solid black!important;
-    margin:18px;   
+    margin:5%;   
     clear: both;
 }
 .columntype3 img{
@@ -42,8 +61,12 @@
     margin:20px;
     border:1px solid black!important;
 }
-.bor-1{
-    padding:10px;
+.divpadding{
+    padding:2% 0% 3% 0%;
+}
+.content-bar{
+    
+    padding:10px 0px;
     border-bottom:1px solid black!important;
 }
 .imgdiv1{
@@ -57,60 +80,23 @@
     margin-bottom:20px;
     border:1px solid rgb(0, 0, 0); 
 }
-/* section{
-    background-color: #F3F2EE;
+footer{
+    margin:0;
+    padding:0; 
 }
-.marg-top{
-    margin-top:25px;
-} 
-.imgfloat{
-    margin-bottom:130px!important;
+footer .row{
+    margin-right:0;
+    margin-left:0;
 }
-.mt{
-    margin-top:140px!important;
+.gal-img{
+    padding:0;
+    margin:0;
 }
-
-
-.columntype3 h1{
-    margin-top:130px;
-    font-size :43px!important;
-    padding:20px;
-    border-bottom:1px solid black;
-   }
-
-.columntype3 .left-img{
-    width:202px;
-    height:170px;
+.foot-img1{
+    padding:10px;
+    margin-bottom:20px;
+    border:1px solid rgb(0, 0, 0);
+    width:100%;
+    height:225px; 
+    border:1px solid white!important; 
 }
-.columntype3 h2{
- font-size: 22px!important;
-}
-.columntype3 p{
-    font-size: 20px!important;
-}
-.columntype3 a{
-    font-size: 24px;
-    margin-left:55%;
-}
-
-.footsec{
-    clear:both;
-    height:350px;
-}
-.footcol{
-    padding:5%;
-}
-.footcol p{
-    padding:5%;
-}
-.child-row-1 h1{
-    font-size:43px;
-    border-bottom:1px solid white;
-
-}
-.col-6 img{
-    width:95%;
-    height:px;
-    padding:3%;
-    border:1px solid white;
-} */ */
