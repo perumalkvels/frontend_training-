@@ -3,8 +3,13 @@
     margin:0;
     font-family: Roboto;
  }
- @media (min-width:768px){
-
+ @media (min-width:991px){
+    .galery1{
+    display: inline-block;
+    }
+    .galery2{
+        display: inline-block;
+        }
  }
  .pm-0{
     padding:0;
