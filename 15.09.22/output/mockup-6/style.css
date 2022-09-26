@@ -292,6 +292,15 @@ footer{
     font-size:21px;
     padding-bottom: 10px;
 }
+.bottom-footer{
+    background-color: #212020;
+}
+.bottom-footer p{
+    padding:2% 0;
+    margin:0 12%;
+    color:white;
+    display:inline-block;
+}
 
 /*!.......Footer Closed........! */
 

@@ -6,11 +6,13 @@
 
 .banner {
     background-color: rgb(164, 164, 164);
-    padding-bottom: 2%;
+    padding-bottom: 3%;
 }
 
+/* header Section Styling started here*/
 header {
-    padding: .9%;
+    padding: 1%;
+    padding-bottom: 2%;
 
 }
 
@@ -50,6 +52,8 @@ header {
 .slider h2 {
     padding: 100px 150px;
 }
+
+/* Section part Styling started here */
 
 .centerpartition {
     width: 80%;
@@ -100,6 +104,8 @@ header {
 .row3 h2 {
     padding: 20px;
 }
+
+/* Footer part Styling started here */
 
 footer {
     width:100%;

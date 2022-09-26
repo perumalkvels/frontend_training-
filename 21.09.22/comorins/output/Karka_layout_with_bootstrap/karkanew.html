@@ -8,32 +8,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>karkalayout</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
-
+        @media(min-width:768px){
+        
+        .mainbar{
+        margin:0!important;
+        padding:0!important;
+        }
+        }
+        
+        .imgdiv1{
+            height:200px;
+            width:100%;
+        }
+        .imgdiv2{
+            height:100px;
+            width:100%;
+        }
+        .imgdiv3{
+            height:100px;
+            width:100%;
+        }
+        .mp-0{
+            margin:0;
+            padding:0;
+        }
+        .wrapper{
+            margin:1% 0%;
+        }
+        
     </style>
 </head>
 
-<body>
+<body class="bg-secondary">
 
-    <div class="container-fluid bg-secondary ">
+    <div class="wrapper container-fluid bg-secondary ">
+        
+         <!--Header Division Starts -->
         <header class="bg-white">
             <h1 class="text-center pt-4">Karka UI Layout</h1>
             <p class="text-center pt-3 pb-3">Devalop your skills by our teach</p>
             <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item mr-3">
+                <ul class="navbar-nav mr-auto row">
+                    <li class="nav-item ml-4">
                         <a class="nav-link text-light" href="#">link</a>
                     </li>
-                    <li class="nav-item mr-3">
+                    <li class="nav-item ml-4">
                         <a class="nav-link text-light" href="#">link</a>
                     </li>
-                    <li class="nav-item mr-3">
+                    <li class="nav-item ml-4">
                         <a class="nav-link text-light" href="#">link</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item ml-3">
+                    <li class="nav-item ml-3 col-sm-12 col-lg col-xl">
                         <a class="nav-link text-light" href="#">link</a>
                     </li>   
                 </ul>
@@ -42,13 +70,13 @@
 
         <!--Section Division Starts -->
         <section class="row main  mt-3 mb-3 ">
-            <div class="mainbar col-8 b-0 m-0 bg-secondary ">
+            <div class="mainbar col-sm-12 col-md-6 col-lg-8 col-xl-8  pl-3 bg-secondary ">
                 <div class="mainchild bg-secondary ">
 
-                    <div class="mainbar1 mb-2 p-3 bg-white">
+                    <div class="mainbar1 ml-3 mb-2 p-3 bg-white">
                         <h4>TITLE HEADING </h4>
                         <p>Title descripition,DEC&,2017</p>
-                        <div class="col-12 bg-dark imgdiv1 ">
+                        <div class="col-12 bg-dark imgdiv1  ">
                         <p class="text-light">image</p>
                         </div>
                         <p>Some text..</p>
@@ -56,7 +84,7 @@
                         eveniet dicta ullam expedita voluptatibus quibusdam.</p>
                     </div>
                     
-                    <div class="mainbar2 mt-3 p-3 bg-white">
+                    <div class="mainbar2 ml-3 mb-3 p-3 bg-white">
                         <div class=" ">
                         <h4>TITLE HEADING </h4>
                         <p>Title descripition,DEC&,2017</p>
@@ -71,20 +99,20 @@
                 </div>
             </div>
 
-            <div class="sidebar col-4 b-2 m-0 bg-secondary">
+            <div class="sidebar col-sm-12 col-md-6 col-lg-4 col-xl-4 m-0 bg-secondary">
                 <div class="sidechild">
-                    <div class="sidebar1 mb-3 col bg-light">
+                    <div class="sidebar1 mb-3 p-3 col bg-light">
                             <h5 class="pl-2">About me</h5>
                             <div class=" mb-1 bg-dark imgdiv2 "> <p class="text-light p-2">image</p> </div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, illum.</p>
                     </div>
-                    <div class="sidebar2 mb-3 col bg-light p-2">
+                    <div class="sidebar2 mb-3 p-3 col bg-light p-2">
                         <h5 class="text-center mb-2">Popular Post</h5>
-                        <div class=" mb-1 bg-dark imgdiv3 "> <p class="text-light p-2">image</p> </div>
-                        <div class=" mb-1 bg-dark imgdiv3 "> <p class="text-light p-2">image</p> </div>
-                        <div class=" mb-1 bg-dark imgdiv3"> <p class="text-light p-2">image</p> </div>
+                        <div class=" mb-1 p-2 bg-dark imgdiv3 "> <p class="text-light p-2">image</p> </div>
+                        <div class=" mb-1 p-2 bg-dark imgdiv3 "> <p class="text-light p-2">image</p> </div>
+                        <div class=" mb-1 p-2 bg-dark imgdiv3"> <p class="text-light p-2">image</p> </div>
                     </div>
-                    <div class="sidebar3 mb-3 col bg-light p-2">
+                    <div class="sidebar3 mb-3 p-3 col bg-light p-2">
                         <h5>Follow me</h5>
                         <p>some text..</p>
                     </div>
