@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement </title>
+</head>
+<body>
+    <script>
+
+        //IF - Conditional Statement
+        let a=10;
+        let b=20;
+        if (a<b){
+          console.log("b is Bigger");
+        }
+        else{
+            console.log("a is Bigger");
+        }
+
+        //IF else - Conditional Statement
+        let x=10;
+        let y=20;
+        if (x < y){
+          console.log("y is Bigger");
+        }
+        else if(y < x){
+            console.log("x is Bigger");
+        }
+        else if(y == x){
+            console.log("x and y are equal");
+        }
+        else{
+            console.log("Please Check Your Input");
+        }
+
+
+        //IF - Conditional Statement with ! and &&  Operator
+        let i=10;
+        let j=20;
+        if ( !1 < i &&  !1 < j){
+          console.log("i is Bigger");
+        }
+        else{
+            console.log("j is Bigger");
+        }
+
+        
+        //IF - Conditional Statement with ! and ||  Operator
+        let k=-3;
+        let l=3;
+        if ( !1 < k &&  !1 < l){
+          console.log("k is Bigger");
+        }
+        else{
+            console.log("l is Bigger");
+        }
+
+                // ...........Looping Statement...........
+
+    // .........For Loop Statement...........
+
+    for(let i =0; i<=10; i++)
+                {
+                    console.log(i);
+                }
+    
+    
+    // .........For Loop Statement to print Array Values...........
+
+    let skills = ['PHP','Javascript','Node Js','Angular']
+    for(let j=0; j<4; j++)
+    {
+        console.log(skills[i]);
+    }
+
+    </script>
+</body>
+</html>

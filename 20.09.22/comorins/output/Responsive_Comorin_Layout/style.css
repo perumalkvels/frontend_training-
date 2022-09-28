@@ -3,7 +3,7 @@
     margin:0;
     font-family: Arial;
 }
-@media (max-width:506px){
+@media (min-width:506px){
 
     header {
         top:0;

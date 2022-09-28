@@ -5,130 +5,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="./CSS/style.css"> -->
+    <link rel="stylesheet" href="./CSS/theme.css">
     <title>Figma-Mockup-3</title>
-    <style>
-       
-       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
-*{
-    padding:0;
-    margin:0;
-    width:100%;
-    font-family: 'Poppins',arial;
-}
-body{
-    margin:0 auto!important;
-}
-.pm-0{
-    padding:0!important;
-    margin:0!important;
-}
-.head-logo{
-    width: 145px;
-    height: 96px;
-}
-.nav-menu{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    align-self:center;
-}
-.centermenu{
-    padding:0 10%;
-    justify-content: center;
-    align-items: center;
-    align-self:center;
-}
-.centermenu li{
-    padding: 0!important;
-    color:#1E1F4B!important;
-    font-weight: bold;
-    font-family: 'Inter',sans-serif;
-
-}
-.centermenu a{
-    color:#1E1F4B!important;
-}
-.rightmenu{
-    display:flex;
-    padding:0;
-
-}
-.contact {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Poppins',sans-serif;
-    padding-left: 5px;
-    padding-right: 5px;
-    background: #706FE5;
-    border-radius: 12px;
-}
-.banner-content{
-    display:flex;
-}
-.banner-mainpic{
-    border-radius:80px!important;
-    margin:4% auto;
-
-}
-
-
-</style>
-
 </head>
+
 <body>
-    <!-- .......Header Started Here......... -->
-    <header>
+        <!-- .......Header Started Here......... -->
+        <header>
 
-        <div class="container">
-        <!-- .......Navbar......... -->
-        <nav class="navbar col-12 mx-auto navbar-expand-md" id="navbar">
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-
-            </button>
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-12 mx-auto my-auto">
-                    <a href="#" class="head-logo  text-center"><img class="head-logo" src="./IMAGES/logo-karka.png"/></a>
-                </div>
-                <div class="col-lg-10 col-md-10 col-sm-12 nav-menu">
-                    <div class="row  collapse navbar-collapse" id="menu">
-
-                        <ul class="centermenu col-lg-10 col-md-9 ms-auto navbar-nav">
-                                    <li class="nav-item ">
-                                        <a href="#" class="bold nav-link">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="bold nav-link">AboutUs</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="bold nav-link">Services</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="bold nav-link">Products</a>
-                                    </li>
-                        </ul>
-
-                        <div class="rightmenu col-lg-2 col-md-3 ">
-                            <a href="#" class=" text-center contact  text-white nav-link ">Contact Us</a>
+            <div class="container-fluid">
+                <!-- .......Navbar......... -->
+                <nav class="navbar col-12 mx-auto navbar-expand-md" id="navbar">
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+    
+                    </button>
+                
+                    <div class="row collapse navbar-collapse" id="menu">
+    
+                        <div class="col-lg-3 col-md-3 ">
+                        <a href="#" class="head-logo "><img class="head-logo" src="./IMAGES/logo-karka.png"/></a>
                         </div>
-
+    
+                        <ul class="centermenu col-lg-6 col-md-3 ms-auto navbar-nav">
+                            <li class="nav-item ">
+                                <a href="#" class="bold nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="bold nav-link">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="bold nav-link">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="bold nav-link">Products</a>
+                            </li>
+                        </ul>
+    
+                        <div class="rightmenu col-lg-3 col-md-3 ">
+                        <a href="#" class=" text-center contact  text-white nav-link ">Contact Us</a>
+                        </div>  
                     </div>
-                </div>
-
+                </nav>
             </div>
-        </nav>
-        </div>
 
         <!-- .......Banner......... -->
         <div class="banner bg-white pm-0">
             <div class="banner-content col-12 ">
-                <img class="banner-mainpic img-fluid col-10" src="./IMAGES/servicesbannerpic.png" alt="" />
+              <img class="banner-mainpic img-fluid col-10" src="./IMAGES/servicesbannerpica.png" alt="" /> 
             </div>
         </div>
+
     </header>
     <!-- .......Header End......... -->
+
+    <section>
+        <div class="container serviceproducts">
+            <div class="row">
+                <div class="col-lg-3 card-item card">
+                    <img class="card-img img-fluid" src="./IMAGES/servicesbannerpic.png">
+                    <div class="card-body pm-0 ">
+                        <h5 class="text-left card-title mt-3 ">App Design - June 20, 2022</h5>
+                        <h5 class="text-left card-text ">Redesign channel website landng page</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 card-item card">
+                    <img class="card-img img-fluid" src="./IMAGES/smallbannerpic.png">
+                    <div class="card-body pm-0 ">
+                        <h5 class="text-left card-title mt-3 ">App Design - June 20, 2022</h5>
+                        <h5 class="text-left card-text ">Redesign channel website landng page</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 card-item card">
+                    <img class="card-img img-fluid" src="./IMAGES/servicesbannerpic.png">
+                    <div class="card-body pm-0 ">
+                        <h5 class="text-left card-title mt-3 ">App Design - June 20, 2022</h5>
+                        <h5 class="text-left card-text ">Redesign channel website landng page</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 card-item card">
+                    <img class="card-img img-fluid" src="./IMAGES/smallbannerpic.png">
+                    <div class="card-body pm-0 ">
+                        <h5 class="text-left card-title mt-3 ">App Design - June 20, 2022</h5>
+                        <h5 class="text-left card-text ">Redesign channel website landng page</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid servicecontents col-12"> 
+            <div class="service-text col-lg-6 text-center">
+                <h1 class="product-heading">Let’s hear <br>What they says</h1>
+                <img class="colen-left" src="./IMAGES/colon-left.png" alt="">
+                <img class="colen-right" src="./IMAGES/colon-right.png" alt="">
+                <p class="product-para col-lg-12"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus vel lobortis tincidunt
+                    fames quisque mauris at diam. Nullam morbi ipsum turpis amet id posuere torto
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            </div>
+            <div class="profiles col-lg-12">
+                <ul class="profile-list list-group list-group-horizontal">
+                    <li class="list-group-item"><a><img clas="img-fluid col-2 img-small" src="./IMAGES/figfirst.png"></a></li>
+                    <li class="list-group-item"><a><img clas="img-fluid col-2 img-medium" src="./IMAGES/fig2left.png"></a></li>
+                    <li class="list-group-item center-img"><a><img clas="img-fluid col-2 " src="./IMAGES/figmiddle.png"></a></li>
+                    <li class="list-group-item"><a><img clas="img-fluid col-2 img-medium" src="./IMAGES/fig2right.png"></a></li>
+                    <li class="list-group-item"><a><img clas="img-fluid col-2 img-small" src="./IMAGES/figlast.png"></a></li>
+                </ul>
+            </div>
+            <div class="portfolio-text">
+                <h1 class="text-center">Ricky Aprilia</h1>
+            <p class="text-center">Founder of Varibo</p>
+            </div>
+            
+        </div>
+        <div class="row about-services">
+            <div class="help col-lg-6">
+                <h1>How we can help you</h1>
+                <p>Follow our newsletter. We will regulary update our latest project and availability.</p>
+                <div class="input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                      </svg>
+                    <input type="text" placeholder="Enter your email address">
+                    <button type="button" class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+            <div class="row col-lg-6 About-text">
+                <div class="col-6 text-sec1">
+                    <img class="about-icons" src="./IMAGES/icon1.png" alt="">
+                    <h3>UI/UX Design</h3>
+                    <p>Sometimes features require a short description</p>
+                </div>
+                <div class="col-6 text-sec1">
+                    <img class="about-icons" src="./IMAGES/icon2.png" alt="">
+                    <h3>Logo Branding</h3>
+                    <p>Sometimes features require a short description</p>
+                </div>
+                <div class="col-6 text-sec1">
+                    <img class="about-icons" src="./IMAGES/icon3.png" alt="">
+                    <h3>App Design</h3>
+                    <p>Sometimes features require a short description</p>
+                </div>
+                <div class="col-6 text-sec1">
+                    <img class="about-icons" src="./IMAGES/icon1.png" alt="">
+                    <h3>Webiste Design</h3>
+                    <p>Sometimes features require a short description</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer >
         <div class="footer-main mx-auto container">
                 <div class="footer-logo col-12">
@@ -160,7 +184,7 @@ body{
                     </div> 
                 </div>
                 <p class="text-center text-white copyright col-sm-12 col-12">© power 2021 - All Rights Reserved</p>
-            </div>
+        </div>
                     
                 </div>
             </div>

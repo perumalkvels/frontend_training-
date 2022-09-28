@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                    
+            
+            // Functions.................
+            // let list = [56,77,88,99];
+
+            // function tot_value()
+            // {
+            //     let total = 0;
+            //     for(let i=0;i<list.length;i++)
+            //     {
+            //         total = total + list[i];
+            //     }
+            //     return total;
+            // }
+
+            // let result = tot_value();
+            // alert(result);
+
+
+
+        //    let list1=[24,32,66,77,63];
+        //    let list2=[1,2,3,4,5,6,7,8];
+        //     function tot_value(arr)
+        //     {
+        //         let total1 = 0;
+        //         for(let i=0;i<arr.length;i++)
+        //         {
+        //             total1 = total1 + list1[i];
+        //         }
+        //         return total1;
+        //     }
+            
+            
+        //     let result1 = tot_value(list1);
+        //     console.log(result1);
+            
+        //     let result2 = tot_value(list2);
+        //     console.log(result2);
+        </script>
+
+        <div class="container">
+            <label for="Number1">number1 :</label>
+            <input type="number1" id="num1" />
+            <label for="Number2">number2 :</label>
+            <input type="number2" id="num2" />
+            <button onclick="add()">Add</button>
+        </div>
+        <script>
+            function add(){
+                let a= document.getElementById("num1").value;
+                let b= document.getElementById("num2").value;
+                let c= Number(a) + Number(b);
+                alert(c);
+                console.log(c);
+            }
+        </script>
+    <br/>
+
+<div class="contanier-1 ">
+
+    <label for="ADD ITEM ">number1 :</label>
+    <input type="text" id="item" />
+    <button onclick="add_item()" type="button">ADD</button>
+    <ul id="tudo"></ul>
+    
+</div>
+<script>
+    let list=[];
+    function add_item(){
+        let todo= document.getElementById("item").value;
+        list.push(todo);
+        display(list);
+    }
+
+    function display(list_arr)
+    {
+        let element ="";
+        for(let i=0;i<list_arr.length;i++)
+        {
+            element = element + "<li>"+ list_arr[i]+"</li>";
+        }
+        document.getElementById("tudo").innerHTML = element;
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Details</title>
+</head>
+<body>
+    <script>
+        let resume = {
+
+            name: "Arumuga Perumal",
+
+            education :[
+                         { 
+                            study : "H.S.C",
+                            marksInPercentage : 79,
+                            institute : "S.M.R.V.Higher Secondary School",
+                            place: "Vadasery, Nagercoil",
+                              },
+
+                        { 
+                            study : "S.S.L.C",
+                            marksInPercentage : 71,
+                            institute : "S.M.R.V.Higher Secondary School",
+                            place: "Vadasery, Nagercoil",
+                              },
+
+                         { 
+                            study : "B.tech in Information Technology ",
+                            marksInPercentage : 69,
+                            institute : "Cape Institute of Technology",
+                            place: "Vadasery, Nagercoil",
+                              }
+                            ],
+                        
+
+            skills : ['Quick Learner','Editing Skills','Team Player'],
+
+            experience : ['4 Years of experience in Designer @ SK-Marketing'],
+
+            certification : null,
+
+            areaofinterest : ['Front-End-Techonology','Photoshop-Design','UI & UX Design'],
+
+            hobbies : ['Editing','Cycling','Playing With Pets'],
+
+            personalDetails : {
+                                dob        : "15-05-1995",
+                                bloodgroup :  "O+ve",
+                                contact    :  8122594426,
+                                email_id   :  "perumal.k.159@gmail.com",
+                                father_Name:  "Kumaravelu",
+                                mother_Name:  "Subbulekshmi",
+                                language   : ['Tamil','English'],
+                               }
+            }
+
+            let sum = 0;
+
+            for(i=0;i<resume.education.length;i++)
+            {
+                console.log(resume.education[i].institute);
+                sum = sum + resume.education[i].marksInPercentage;
+            }
+            let avg = sum /resume.education.length;
+            console.log("Total Marks =",sum);
+            console.log("Average Marks in Percentage "+avg+"%");
+         
+            //if a case: where sslc should not be taken the result like;
+            let sum1 = 0;
+            let count= 0;
+            for(i=0;i<resume.education.length;i++)
+            {
+                if(resume.education[i].study !== "S.S.L.C")
+                {
+                sum1 = sum1 + resume.education[i].marksInPercentage;
+                count++;
+                }
+            }
+            let avg1 = sum1 /count;
+            console.log("Total Marks =",sum1);
+            console.log("Average Marks in Percentage "+avg1+"%");
+
+            // Normal IF Statemen
+
+            let s=5;
+            let result = "";
+            if(s<10)
+            {
+                result = "Average";
+            }
+            else{
+                 result = "Good";
+            }
+
+            // Ternary Operator instead of using if statement 
+
+            let result1 = s<10 ? "Average" : "Good";
+            console.log(result1);
+
+
+
+
+
+            // Console Details...........
+            // alert("Welcome...!" + resume.name + " Please Check your Resume in console ");
+            
+            // console.log("Name :" + resume.name);
+            // console.log("Dob :" +resume.dob );
+            // console.log("Education");
+            // console.log("SSLC :" +resume.education.sslc.marksInPercentage);
+            // console.log("SSLC :" +resume.education.sslc.schoolName);
+            // console.log("SSLC :" +resume.education.sslc.schoolName);
+            // console.log("Hsc :" +resume.education.hsc.marksInPercentage);
+
+    </script>
+
+</body>
+</html>
