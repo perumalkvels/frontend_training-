@@ -4,13 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Functions</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            border-color: none;
+        }
+
+        .splitbox{
+            width:100%;
+        }
+        .box1{
+            margin:0 2% 0 4%;
+            width:44%;
+            height:400px;
+            background-color: blueviolet;
+            text-align: center;
+            border-radius: 20px;
+            float:left;
+        }
+        p{
+            font-size: 20px;
+        padding: 15px 0 0 0 ;
+        color: white;
+        }
+        label{
+            font-size: 20px;
+            color:white;
+            padding-top:15px;
+            height:40px;
+            text-align: center;
+            display:block;
+        }
+        input{
+            text-align: center;
+            font-size: 20px;
+            margin:0 auto;
+            width:300px;
+            height:40px;
+            border-radius: 7px;
+            display:block; 
+        }
+        button{
+            font-size: 20px;
+            width:150px;
+            height:40px;
+            margin: 50px auto 0 auto;
+            display:block; 
+            border-radius: 7px; 
+            position: relative;
+        }
+        span{
+
+            top: 337px;
+            padding: 30px;
+            color: white;
+            position: absolute;
+            left: 217px;
+        }
+        .box2 {
+            margin:0 2% 0 3%;
+            width:44%;
+            height:400px;
+            background-color: blueviolet;
+            text-align: center;
+            border-radius: 20px;
+            float:left;
+        }
+        #tudo{
+            max-width:40%;
+            text-align: center;
+            font-size:20px;
+        color: snow;
+            
+            list-style-type: none;
+         
+        }
+        #tudo li{
+            display:inline;
+            text-align: center;
+            padding:5px;
+            margin-left:10px;
+            border-radius: 7px;
+        }
+    </style>
 </head>
 <body>
+    <h1 style="text-align: center;">Learn  About  Functions</h1>
+    <!-- Add Array of numbers Using Function with single list -->
     <script>
-                    
-            
-            // Functions.................
+        
             // let list = [56,77,88,99];
 
             // function tot_value()
@@ -25,73 +108,91 @@
 
             // let result = tot_value();
             // alert(result);
-
-
-
-        //    let list1=[24,32,66,77,63];
-        //    let list2=[1,2,3,4,5,6,7,8];
-        //     function tot_value(arr)
-        //     {
-        //         let total1 = 0;
-        //         for(let i=0;i<arr.length;i++)
-        //         {
-        //             total1 = total1 + list1[i];
-        //         }
-        //         return total1;
-        //     }
+    </script>              
             
-            
-        //     let result1 = tot_value(list1);
-        //     console.log(result1);
-            
-        //     let result2 = tot_value(list2);
-        //     console.log(result2);
-        </script>
+    <!-- Add Array of numbers Using Function with Many list  -->
+    <script>
 
-        <div class="container">
-            <label for="Number1">number1 :</label>
+    //     let list1=[24,32,66,77,63];
+    //     let list2=[1,2,3,4,5,6,7,8];
+    //     let list3=[100,100,100,100,100];
+
+    //         function tot_value(arr)
+    //         {
+    //             let total1 = 0;
+    //             for(let i=0;i<arr.length;i++)
+    //             {
+    //                 total1 = total1 + arr[i];
+    //             }
+    //             return total1;
+    //         }
+            
+    //         let result1=tot_value(list1);
+    //         console.log(result1);
+
+    //         let result2=tot_value(list2);
+    //         console.log(result2);
+
+    //         let result3=tot_value(list3);
+    //         console.log(result3);
+
+    </script>
+
+    <div class="split-box row">
+       
+        <!-- Get two numbers via input tag and add them Using Function -->
+        <div class="box1 col-lg-6 ">
+
+            <p>Get two numbers via input tag and add them Using Function</p>
+            <label for="Number1">Enter First Number</label>
             <input type="number1" id="num1" />
-            <label for="Number2">number2 :</label>
+            <label for="Number2">Enter Second Number</label>
             <input type="number2" id="num2" />
-            <button onclick="add()">Add</button>
+            <button onclick="add()">Result</button>
+            <span>Click here to add the numbers</span>
+
+            <script>
+                function add(){
+                    let a= document.getElementById("num1").value;
+                    let b= document.getElementById("num2").value;
+                    let c= Number(a) + Number(b);
+                    alert(c);
+                }
+            </script>
+        </div>
+
+         <!-- Get Tourdocumentlist via input tag and Display them Using Function -->
+        <div class="box2 col-lg-6">
+
+        <p>Get Tour-document-list via input tag and Display them Using Function</p>
+        <label for="ADD ITEM">Enter Your List Item One by One </label>
+        <input type="text" id="item" />
+        <button onclick="add_item()" type="button">ADD</button>
+        <ul id="tudo"></ul>
+    
         </div>
         <script>
-            function add(){
-                let a= document.getElementById("num1").value;
-                let b= document.getElementById("num2").value;
-                let c= Number(a) + Number(b);
-                alert(c);
-                console.log(c);
+            let list=[];
+            function add_item(){
+                let item= document.getElementById("item").value;
+                console.log(item);
+                if(item !== null){
+                list.push(item);
+                }
+                display(list);
+                document.getElementById("item").value = "";
             }
-        </script>
-    <br/>
 
-<div class="contanier-1 ">
-
-    <label for="ADD ITEM ">number1 :</label>
-    <input type="text" id="item" />
-    <button onclick="add_item()" type="button">ADD</button>
-    <ul id="tudo"></ul>
-    
+            function display(list_arr)
+            {
+                let element ="";
+                for(let i=0;i<list_arr.length;i++)
+                {
+                    element = element + "<li>"+ list_arr[i]+"</li>";
+                }
+                document.getElementById("tudo").innerHTML = element;
+            }
+    </script>
 </div>
-<script>
-    let list=[];
-    function add_item(){
-        let todo= document.getElementById("item").value;
-        list.push(todo);
-        display(list);
-    }
-
-    function display(list_arr)
-    {
-        let element ="";
-        for(let i=0;i<list_arr.length;i++)
-        {
-            element = element + "<li>"+ list_arr[i]+"</li>";
-        }
-        document.getElementById("tudo").innerHTML = element;
-    }
-    
-</script>
 </body>
 </html>

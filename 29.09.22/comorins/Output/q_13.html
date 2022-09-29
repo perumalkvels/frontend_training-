@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findLargest(num1,num2,num3)
+        {
+            if(num1 >= num2 && num1 >= num3){
+                console.log(num1+ " is a Largest Number ");
+            }
+            else if (num2 >= num1 && num2 >= num3)
+            {
+                console.log(num2+ " is a Largest Number ");
+            }
+            else
+            {
+                console.log(num3 +" is a Largest Number ");
+            }
+        }
+
+        findLargest(40,30,100);
+        findLargest(150,240,100);
+        findLargest(500,500,600);
+    </script>
+</body>
+</html>
