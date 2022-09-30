@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function evalNumbers(num1,num2,operation)
+        {
+            if(operation == "add")
+            {
+                let result=num1 + num2;
+                console.log("Addition of two numbers : ",result);
+            }
+            else if(operation == "sub")
+            {
+                let result=num1 - num2;
+                console.log("Subtraction of two numbers are : ",result);
+            }
+            else if(operation == "multiply")
+            {
+                let result=num1 * num2;
+                console.log("Multiplication of two numbers are : ",result);
+            }
+            else if(operation == "divide")
+            {
+                let result=num1 / num2;
+                console.log("division of two numbers are : ",result);
+            }
+            else if(operation == "modulus")
+            {
+                let result=num1 % num2;
+                console.log("modulus of two numbers are : ",result);
+            }
+            else
+            {
+                console.log("Invalid operation");
+            }
+        }
+        evalNumbers(25,25,"add");  
+        evalNumbers(100,25,"sub"); 
+        evalNumbers(15,5,"multiply"); 
+        evalNumbers(625,25,"divide"); 
+        evalNumbers(140,25,"modulus");     
+
+    </script>
+</body>
+</html>

@@ -8,24 +8,28 @@
 </head>
 <body>
     <script>
-
-        
-        function printEven(arraylist)
-        {
-            let even=[];
-            for(i=0;i<=arraylist.lenght;i++)
+            
+            function printEven(arr)
             {
-                let x = arraylist[i];
-                if(x%2==0)
+                let evenarray=[];
+                for(let i=0;i<arr.length;i++)
                 {
-                    even.push(x);
+                    if(arr[i]%2==0)
+                    {
+                    console.log(arr[i]);
+                    evenarray.push(arr[i]);
+                    }
                 }
-                
+                console.log(evenarray);
             }
-            console.log(even);
-        }
+            
+        let list1=[24,32,66,77,63];
+        printEven(list1);   
+        
+        let list2=[1,2,3,4,5,6,7,8];
+        printEven(list2);
 
-        printEven([12,34,56,87,23,6,9]);
+    
     </script>
 </body>
 </html>

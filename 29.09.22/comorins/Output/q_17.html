@@ -8,19 +8,19 @@
 </head>
 <body>
     <script>
-        function printArray()
+        function checkLeapYear(year)    
         {
-            for(i=0;i<=3;i++)
+            if(year%4 == 0 && year%100 !==0)
             {
-                for(j=i;j<=3;j++)
-                {
-                    console.log(i,j);
-                }
+                console.log("leap year");
+            }
+            else
+            {
+                console.log("Not a Leap Year");
             }
         }
-
-        printArray();
-
+        checkLeapYear(2004);
+        checkLeapYear(1993);
     </script>
 </body>
 </html>
