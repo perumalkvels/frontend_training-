@@ -3,40 +3,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Print Pattern</title>
+    <style>
+        body{
+            display:flex;
+        }
+        .pattern1{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:50%;
+        }
+        .pattern2{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:50%;
+        }
+    </style>
 </head>
 <body>
+    <div class="pattern1">
     <script>
 
-        // let ptn=[];
-        // function printPattern()
-        // {
-        //     for(i=1; i <= 3; i++)
-        //     {
-        //         for(j=1; j<=i; j++)
-        //             {
-        //             console.log('*');
-        //             }
-                
-        //     }
-
-        // }
-        
-        // printPattern()
+        // Pattern With Stars
 
         function printArray()
         {
-            for(i=0;i<=3;i++)
+            for(let i=1;i<=10;i++)
             {
-                console.log("*");
-                for(j=i;j<=10;j++)
+                for(let j=0;j<i;j++)
                 {
-                    console.log("*");
+                    document.write(" * ");
                       
                 }
+                document.write("<br>");
             }
         }
         printArray();
+    </script>
+    </div>
+    <div class="pattern2">
+        <script>
+
+        // Pattern With Number 
+
+        function printArray1()
+        {
+            for(let i=1;i<=10;i++)
+            {
+                for(let j=0;j<i;j++)
+                {
+                    document.write(" ",j);
+            
+                }
+                document.write("<br>");
+            }
+        }
+        printArray1();
 
 
     </script>

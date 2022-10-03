@@ -9,21 +9,25 @@
 <body>
     <script>
         
-        function fibonacci(n)
+        function fibonacci(upto)
         { 
             let f1=0;
             let f2=1;
             let f3;
+            let j=0;
+            let arr=[];
             console.log("Here the fibonacci Series....")
-            for(let i=0;i<=n;i++)
+            for(let i=0;i<=upto;i++)
             {
                 f3=f1+f2;
                 console.log(f3);
                 f1=f2;
                 f2=f3;
             }
+
+
         }
-        fibonacci(5);
+        fibonacci(10);
 
 </script>
 </body>

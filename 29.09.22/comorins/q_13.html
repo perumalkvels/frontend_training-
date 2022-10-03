@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum=0;
+        function digitSum(num)
+        {
+            while(num>0)
+            {
+                let rem = num%10; // 3 
+                sum = sum+rem;
+                num = parseInt(num/10); //for get a actual number
+            }   
+            console.log(sum);
+            sum=0;
+        }
+        digitSum(55555);
+        digitSum(33333);
+        digitSum(333);
+        digitSum(666);
+    </script>
+
+</body>
+</html>

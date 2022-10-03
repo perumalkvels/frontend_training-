@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,17 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+
+    <button onClick="test()" type="submit">Submit</button> 
     <script>
-        let str;
-
-        function digitCount(num)
+        function test()
         {
-                str = num.toString();
-                console.log(str.length);
+            localStorage.setItem("name","ramesh");
+            sessionStorage.setItem("name","suresh");
         }
-        digitCount(3333);
-        digitCount(666666);
     </script>
-
 </body>
 </html>

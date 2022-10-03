@@ -8,14 +8,16 @@
 </head>
 <body>
     <script>
-        function numPower()
+        function numPower(num,power)
         {
-            for(i=0;i<=5;i++)
+            let value=1;
+            for(i=1;i<=power;i++)
             {
-                console.log(i*i);
+                value=value*num;
             }
+            console.log(value);
         }
-        numPower();
+        numPower(5,3);
 
     </script>
 </body>
