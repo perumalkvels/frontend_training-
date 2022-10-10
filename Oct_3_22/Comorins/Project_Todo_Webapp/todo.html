@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        body{
+            font-weight: 300;
+            background-color:lightseagreen;
+        }
+        .todo-wrapper{
+            margin:7% auto;
+            width:75%;
+            height:200vh;
+            background-color: #fff;
+            border-radius: 15px;
+            padding:50px;
+        }
+        .todo-wrapper p{
+            margin:10px 0px;
+        }
+        .todo-form{
+            margin-top:20px;
+        }
+        .todo-form input{
+            padding:5px;
+        }
+        .todo-form button{
+            margin-left:10px;
+            vertical-align: top;
+            text-align: center;
+            width:80px;
+            border-radius: 10px!important;
+        }
+        .todo-controller{
+            display :flex;
+            justify-content: center;
+            margin:3% ;
+        }
+        .todo-controller button{
+            width:200px;
+            text-align: center;
+            margin-right: 125px;
+        }
+        .todo-controller button:last-child{
+            text-align: center;
+            margin-right: 0px;
+        }
+        .todo-wrapper ol{
+            width:100%;
+            display:table;
+            margin-top:10px;
+            margin-left:20px;
+        }
+        .todo-wrapper li{
+            margin-top:20px;
+            width:10%;
+            font-size: larger;
+            color:darkgreen;
+            position:relative;
+        }
+        #todo_list button{
+            color: #fff;
+            background-color: #ab00a8;
+            border-color: #007bff;
+            border:none;
+            font-size: 12px;
+            border-radius: 5px;
+            padding:1px 5px 2px 5px;
+            display:inline-block;
+            margin-right: 20px;
+            position:absolute;
+            left: 108px;
+            top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-wrapper">
+        <h1>My to-do List</h1>
+        <p class="h4 text-secondary"><i>Double-Click an item to mark it complete</i></p>
+        <form class="todo-form">
+            <input type="text" id="todo_input" />
+            <button type="button" class="btn btn-primary rounded" onclick="addItem()">Add</button>
+        </form>
+        <div id="taskContainer">
+            <ol id="todo_list"> </ol>
+        </div>
+        <div class="todo-controller">
+            <button type="button" class="btn btn-primary rounded" onClick="clearControlItem()" id="clear_control_button">Clear Completed</button>
+            <button type="button" class="btn btn-danger rounded" onClick="emptyList()" id="empty_list_button">Empty List</button>
+            <button type="button" class="btn btn-success rounded" onClick="" id="save_list_button">Save List</button>    
+        </div>
+    </div>
+    <script src="./js/todo.js"></script>
+</body>
+</html>

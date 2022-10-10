@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form validation</title>
+</head>
+<body>
+<div class="container">
+    <i class="fa-regular fa-circle-check"></i>
+    <i class="fa-regular fa-circle-exclamation"></i>
+    <form id="form" class="form">
+        <h2>Register</h2>
+        <div class="form-control">
+            <i class=" fa-regular fa-circle-check"></i>
+            <i class="fa-regular fa-circle-exclamation"></i>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+            
+            <small id="errorText">Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email">
+            <i class="fa-regular fa-circle-check"></i>
+            <i class="fa-regular fa-circle-exclamation"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <i class="fa-regular fa-circle-check"></i>
+            <i class="fa-regular fa-circle-exclamation"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="password2">Confirm Passsword</label>
+            <input type="password" id="password2" placeholder="Enter password again">
+            <i class="fa-regular fa-circle-check"></i>
+            <i class="fa-regular fa-circle-exclamation"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="contact">Mobile No</label>
+            <input type="number" id="contact" placeholder="Enter Mobile Number">
+            <i class="fa-regular fa-circle-check"></i>
+            <i class="fa-regular fa-circle-exclamation"></i>
+            <small>Error message</small>
+          </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+    <script src="validate.js"></script>
+</body>
+</html>

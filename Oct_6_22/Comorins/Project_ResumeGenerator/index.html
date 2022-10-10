@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume-Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .container{
+            padding:50px;
+            margin:0 auto; 
+        }
+        input, textarea{
+            text-align: center;
+            padding:10px 20px;
+            border-radius: 5px;
+            border :1px solid black!important;
+            box-shadow: none!important;
+            margin:10px auto;
+        }
+        .single_field{
+            padding:0 30px;
+        }
+        .single_field input{
+            font-size: larger;
+            text-align: center;
+            padding:10px;
+            border-radius: 10px;
+            border-color : black!important;
+            box-shadow: none!important;
+
+            
+        }
+        .single_field textarea {
+            font-size: larger;
+            margin-top: 40px!important;
+            text-align: center;
+            padding:10px 5px;
+            border-radius: 10px!important;
+            border-color : black!important;
+            box-shadow: none;
+            
+        }
+        .edu_table{
+             padding:30px;
+            margin:0 auto;
+            text-align: center;
+            border:2px dotted white;
+        }
+        .edu_table th{
+            font-size: larger;
+            text-align: center;
+            padding:10px;
+            border-radius: 10px;
+            box-shadow: none!important;
+            border-bottom:2px dotted white;
+        }
+
+        .skills{
+            margin:0 auto;
+            display:flex;
+            justify-content: center;
+
+        }
+        .certification1,.certification2{
+             margin:10px auto;
+            display:flex;
+            justify-content: center;
+        }
+        .certification input{
+            text-align: center;
+            padding:10px 20px;
+            border-radius: 5px;
+            border :1px solid black!important;
+            box-shadow: none!important;
+            margin:0 auto;
+        }
+        .projects{
+            margin:0 auto;
+            
+        }
+        .inner-projects{
+
+            width:100%;
+            margin:0 auto;
+            font-size: larger;
+            text-align: center;
+            padding:20px;
+            border:2px dotted white;
+        }
+        .interests input{
+            display:block;
+            padding:2% 30%;
+        }
+        .personalDetails{
+            margin:0 20%;
+            border:2px dotted white;
+        }
+        .personalDetails input{
+            margin-bottom: 10px;
+            display:block;
+            padding:1% 20%;
+        }
+        .resume_links{
+            display:flex;
+            list-style-type: none;
+            color: white !important;
+        }
+        .resume_link li{
+            display:inline;
+            border:1px solid white !important;
+        }
+        
+    </style>
+</head>
+<body class="">
+    <h2 class="col-12 mt-3 mb-3 text-center text-white bg-info display-5  p-3 font-weight-bold" >Resume-Generator</h2>
+    <div class="container bg-info">
+
+        <div class="single_field row mb-5">
+            <h2 class="col-12  text-center text-white">Fill Your Basic Details here</h2> 
+                <input class="col-5 mt-3 ml-5 mr-5" type="text" placeholder=" Name" id="name" onkeyup="addDetails(id,this.value)">
+                <br>
+                <input class="col-5 mt-3 ml-4 mr-0" type="email" placeholder="Email Id" id="email" onkeyup="addDetails(id,this.value)">
+                <br>
+                <input class="col-5 mt-3 ml-5 mr-5" type="number" placeholder="Contact No " id="mobile" onkeyup="addDetails(id,this.value)">
+                <br>
+                <input class="col-5 mt-3 ml-4 mr-0"  type="text" placeholder="Role " id="role" onkeyup="addDetails(id,this.value)">
+                <br>
+                <textarea class=" rounded text-center col-7 mx-auto " placeholder="Address " id="address" onkeyup="addDetails(id,this.value)"></textarea>
+                <br>
+                <textarea class=" rounded text-center col-9 mx-auto " placeholder="Your Career Objective " id="objective" onkeyup="addDetails(id,this.value)"></textarea>
+                <br>
+        </div>
+
+        <table class="edu_table mt-5">
+            <h2 class="col-12 text-center text-white">Fill Your Education here</h2> 
+            <div >
+            <thead>
+                <tr class="">
+                    <th class="mr-4"> <label>#</label></th> 
+                    <th class="mr-4"> <label>Course</label>     </th>  
+                    <th class="mr-4"> <label>Year</label>       </th>
+                    <th class="mr-4"> <label>Institute</label>  </th>
+                    <th class="mr-4"> <label>Percentage</label> </th>
+                </tr>
+            </thead>
+            <tbody >
+                
+                <tr class="col-12">
+                    <th> <label>1</label></th> 
+                    <td><input type="text" id="education" placeholder="Course" onkeyup="addDetails(id,this.value,0,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Year" onkeyup="addDetails(id,this.value,0,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Institute" onkeyup="addDetails(id,this.value,0,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Percentage" onkeyup="addDetails(id,this.value,0,placeholder)"></td>
+                </tr>
+        
+                <tr class="col-12">
+                    <th> <label>2</label></th> 
+                    <td><input type="text" id="education" placeholder="Course" onkeyup="addDetails(id,this.value,1,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Year" onkeyup="addDetails(id,this.value,1,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Institute" onkeyup="addDetails(id,this.value,1,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Percentage" onkeyup="addDetails(id,this.value,1,placeholder)"></td>
+                </tr>
+        
+                <tr class="col-12">
+                    <th> <label>3</label></th> 
+                    <td><input type="text" id="education" placeholder="Course" onkeyup="addDetails(id,this.value,2,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Year" onkeyup="addDetails(id,this.value,2,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Institute" onkeyup="addDetails(id,this.value,2,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Percentage" onkeyup="addDetails(id,this.value,2,placeholder)"></td>
+                </tr>
+        
+                <tr class="col-12">
+                    <th> <label>4</label></th> 
+                    <td><input type="text" id="education" placeholder="Course" onkeyup="addDetails(id,this.value,3,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Year" onkeyup="addDetails(id,this.value,3,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Institute" onkeyup="addDetails(id,this.value,2,placeholder)"></td>
+                    <td><input type="text" id="education" placeholder="Percentage" onkeyup="addDetails(id,this.value,2,placeholder)"></td>
+                </tr>
+            </tbody>
+            </div>
+        </table>
+
+        <div class="skills row">
+        
+        <h2 class="col-12 mt-5 mb-5 text-center text-white">Let Me Know Your Skills</h2>   
+        
+        <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,0)" />
+        <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,1)" />
+        <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,2)" />
+        <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,3)" />
+    
+        </div>
+
+        <div class="certification row">
+        <h2 class="col-12 mt-5 mb-5 text-center text-white">Here Fill Your Certifications</h2>  
+        <div class="certification1 col-12">
+        <input type="text" id="certification" placeholder="courcse_name" onkeyup="addDetails(id,this.value,0,placeholder)">
+        <input type="text" id="certification" placeholder="duration" onkeyup="addDetails(id,this.value,0,placeholder)">
+        <input type="text" id="certification" placeholder="institute" onkeyup="addDetails(id,this.value,0,placeholder)">
+        <input type="text" id="certification" placeholder="yearOfJoining" onkeyup="addDetails(id,this.value,0,placeholder)">
+        </div>
+
+        <div class="certification2 col-12">
+        <input type="text" id="certification" placeholder="courcse_name" onkeyup="addDetails(id,this.value,1,placeholder)">
+        <input type="text" id="certification" placeholder="duration" onkeyup="addDetails(id,this.value,1,placeholder)">
+        <input type="text" id="certification" placeholder="institute" onkeyup="addDetails(id,this.value,1,placeholder)">
+        <input type="text" id="certification" placeholder="yearOfJoining" onkeyup="addDetails(id,this.value,1,placeholder)">
+        </div>
+
+        </div>
+
+        <div class="projects ">
+        <h2 class="col-12 mt-5 mb-5 text-center text-white" >About Your Projects</h2>
+        <div class="inner-projects row">
+        <div class="project1 col-6">
+        <input class="col-12" type="text" id="projects" placeholder="title" onkeyup="addDetails(id,this.value,0,placeholder)">
+        <textarea class="col-12" type="text" id="projects" placeholder="abstract" onkeyup="addDetails(id,this.value,0,placeholder)"></textarea>
+        </div>
+
+        <div class="project2 col-6">
+        <input class="col-12" type="text" id="projects" placeholder="title" onkeyup="addDetails(id,this.value,1,placeholder)">
+        <textarea  class="col-12" type="text" id="projects" placeholder="abstract" onkeyup="addDetails(id,this.value,1,placeholder)"></textarea>
+        </div>
+    </div>
+
+        </div>
+
+        <div class="interests row">
+        <div class=" col-6 areaofinterest">
+        <h2 class="col-12 mt-5 mb-5 text-center text-white" >About Your Interests</h2>
+        <input  type="text" id="interest" placeholder="Area Of Interest" onkeyup="addDetails(id,this.value,0)" />
+        <input type="text" id="interest" placeholder="Area Of Interest" onkeyup="addDetails(id,this.value,1)" />
+        <input type="text" id="interest" placeholder="Area Of Interest" onkeyup="addDetails(id,this.value,2)" />
+    
+        </div>
+
+        <div class="col-6 hobbies">
+        <h2 class="col-12 mt-5 mb-5 text-center text-white"  >About Your Hobbies</h2>
+
+        <input type="text" id="hobbies" placeholder="Hobbies" onkeyup="addDetails(id,this.value,0)" />
+        <input type="text" id="hobbies" placeholder="Hobbies" onkeyup="addDetails(id,this.value,1)" />
+        <input type="text" id="hobbies" placeholder="Hobbies" onkeyup="addDetails(id,this.value,2)" />
+    
+        </div>
+   
+        </div>
+
+        <div class="personalDetails mt-5">
+        <h2 class="col-12 mt-3  mb-3 text-center text-white" >Enter Your Personal Details here</h2>
+        
+        <input type="text" id="personal" placeholder="Occupatio_Name" onkeyup="addDetails(id,this.value,'occupatioName')" />
+        <input type="text" id="personal" placeholder="Date_of_Birth" onkeyup="addDetails(id,this.value,'dob')" />
+        <input type="text" id="personal" placeholder="Marital_Status" onkeyup="addDetails(id,this.value,'maritalStatus')" />
+        <input type="text" id="personal" placeholder="Blood_Group" onkeyup="addDetails(id,this.value,'bloodGroup')" />
+        <input type="text" id="personal" placeholder="First Langauge" onkeyup="addDetails(id,this.value,'language',0)" />
+        <input type="text" id="personal" placeholder="Second Langauge " onkeyup="addDetails(id,this.value,'language',1)" />
+    
+        </div>
+
+        <div class="buttons mx-auto text-center">
+            <button class="mt-5 pl-5 pr-5 border border-white btn btn-primary" onclick="savedetails()">Save</button>
+        </div>
+
+        <div class="resume_links row">
+            <h2 class="col-12 mt-5 text-center text-white p-3 font-weight-bold" >Stored Resume Data </h2>
+            <ol class="col-12 nav justify-content-center" id="resume_list"></ol>
+        </div>
+        <div id="resume_texts"></div>
+    </div>
+
+    <script>
+    let resume={};
+    function addDetails(key,value,index=null,indexkey=null)
+    {
+        if(value==""){
+            alert("Enter a valid data");
+        }
+
+        else if( key=="education" || key=="certification" || key=="projects" ){
+            if(!resume[key]){
+                resume[key]=[];
+            }
+            if(!resume[key][index]){
+                resume[key][index]={};
+            }
+            resume[key][index][indexkey]=value;
+        }
+
+        else if( key=="skill" || key=="interest" || key=="hobbies" ){
+            if(!resume[key]){
+                resume [key]=[];
+            }
+            resume[key][index]=value;
+        }
+        else if(key=="personal"){
+            if(indexkey==null){
+                
+                if(!resume[key]){
+                    console.log("first condition");
+                    resume [key]={};
+                }
+                resume[key][index]=value;
+            }
+            if(indexkey!=null){
+                console.log("Second condition");
+                    resume [key][index]=[];
+                }
+            resume[key][index][indexkey]=value;
+        }
+    
+        else{
+            resume[key] = value;
+        }
+        display();
+    }
+    function display(){
+            document.getElementById("resume_texts").innerHTML=JSON.stringify(resume);
+    }
+
+    // Save the details to LocalStorage
+    function savedetails()
+    {   
+         if(!localStorage.getItem("resume_data")){
+
+            localStorage.setItem("resume_data",JSON.stringify([]));
+        }
+
+        let new_resume=JSON.parse(localStorage.getItem('resume_data'));
+
+        new_resume.push(resume);
+
+        localStorage.setItem("resume_data",JSON.stringify(new_resume));
+        showdetails();
+    }
+
+    // Show the details from the LocalStorage
+
+    function showdetails(){
+            
+        let element="";
+            let resume_index =JSON.parse(localStorage.getItem('resume_data'));    
+            for(i=0;i<resume_index.length;i++){
+                 element= element + "<li class='nav-item m-3 rounded-pill border border-white '> <a class='nav-link text-white' href='view.html?name="+resume_index[i].name +"'target='_blank'>"+ resume_index[i].name + "</a> </li>";
+                   console.log(element);
+            }
+        document.getElementById("resume_list").innerHTML = element;
+       
+    }
+    
+    showdetails();
+
+        
+</script>
+</body>
+</html>

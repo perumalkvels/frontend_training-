@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <script>
+        // here Constpgm1 is a Class Name
+        class Constpgm1{
+            constructor(place){
+                this.place=place;
+            }
+            greetings(){
+                 return `Hai my Place is ${this.place}` ;
+                // console.log("Hai! My Place is "+this.place);    
+            }
+        }
+        let place1= new Constpgm1("nagercoil");
+        console.log(place1.greetings());
+    </script>
+    
+
+
+    <script>
+    class Constclass{
+    
+    constructor(fname,lname){
+        this.fname=fname;
+        this.lname=lname;
+        }
+    getFirstName(){
+        return this.fname;
+    }
+    getLastName(){
+        return this.lname;
+    }
+    getFullName(){
+        return this.getFirstName() + this.getLastName();
+    }
+    }
+    let user_obj = new Constclass("Arumuga","Perumal");
+    console.log(user_obj.getFullName());
+
+    </script>
+
+    <script>
+        class Arithmetic{
+            constructor(num1,num2){
+                this.num1=num1;
+                this.num2=num2;
+            }
+            getAddition(){
+                return "Addition Of Those Two Numbers are : "+(this.num1+this.num2);
+            }
+            getSubtraction(){
+                return "Subtraction Of Those Two Numbers are : "+(this.num1-this.num2);
+            }
+            getMultiplication(){
+                return "Multiplication Of Those Two Numbers are : "+(this.num1*this.num2);
+            }
+            getDivision(){
+                return "Division Of Those Two Numbers are : "+(this.num1/this.num2);
+            }
+        }
+        let opt1= new Arithmetic(24,25);
+        console.log(opt1.getAddition());
+    </script>
+    </div>
+</body>
+</html>
