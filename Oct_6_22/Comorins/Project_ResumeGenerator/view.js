@@ -18,12 +18,20 @@ document.getElementById("maritalStatus").innerHTML=resumeData[i].personal.marita
 document.getElementById("bg").innerHTML=resumeData[i].personal.bloodGroup;
 document.getElementById("language").innerHTML=resumeData[i].personal.language;
 
-person=resumeData[i]
+person=resumeData[i];
+let element="";
 //for skill we use a foor loop
-for(let i=0;i<skill.length;i++){
-  document.getElementById("skill").innerHTML=person.skill[i];
-  console.log(skill[i]);
+for(let i=0;i<person.skill.length;i++){
+  element=element+ "<li>"+ person.skill[i] +"</li>";
 }
+document.getElementById("skill").innerHTML=element;
+
+let element1="";
+for(let i=0;i<=person.hobbies.length;i++){
+  element1=element1+ "<li>"+ person.hobbies[i] +"</li>";
+}
+document.getElementById("hobbies").innerHTML=element1;
+
 for(i=0;i<=projects.length;i++){
 document.getElementById("title").innerHTML=person.projects[i].title;
 document.getElementById("abstract").innerHTML=person.projects[i].abstract;

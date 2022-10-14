@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food App</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./css/index.css"/>
+    <style>
+        .card-text{
+            font-size:16px!important;
+        }
+        .cart-Btn{
+            margin:auto!important;
+            height: 35px;
+            width:80%;
+            display:flex;
+            justify-content: center;
+        }
+        .cart-Btn button{
+            border-radius: 35px;
+        }
+        .cart-Btn-update{
+            border-radius: 13px!important;
+        }
+        .cart-Btn-price{
+            margin:0 3%!important;
+        }
+        .item-qty{
+            margin:auto 0;
+            display:flex;
+            align-content: center;
+        }
+        .User-details{
+            height:200vh;
+        }
+        .User-details-cart{
+            height: 194vh;
+        }
+        .User-details-header{
+            border-bottom:2px solid darkred;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header Starts here -->
+    <div class="wrapper">
+    <header class="container_fluid">
+        <div class="top_title" class="row">
+        <img   src="https://www.codester.com/static/uploads/items/000/018/18519/preview-xl.jpg"/>
+        <p class="text-center ">Taste that best, its on time</p>
+        </div>
+        <nav class="container_fluid navbar navbar-expand-lg bg-dark" id="navbar">
+
+            <!-- Here is a button declaration for toggle a navbar contents -->
+            <button class="sampleclass2 navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#menu">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg> -->
+            </button>
+
+            <div class="sampleclass1 collapse navbar-collapse row" id="menu">
+
+                <ul class="navbar-nav mx-auto  col-lg-9 p-0 m-0">
+                    <li class="nav-item"><a class="nav-link text-white" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="./addProduct.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" ><button type="submit" class="p-0 m-0 kartbutton" onclick=isUserAlive()>Kart</button><img style="color:white" class="nav-icon-img" src="./images/cart-plus-fill.svg"></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="./orderpage.html">Orders<img style="color:white" class="nav-icon-img" src="./images/bag-check-fill.svg"></a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="./login.html" >Account<img style="color:white" class="nav-icon-img" src="./images/person-circle.svg"></a></li>
+                    <li class="nav-item" id="user_status"></li>
+                </ul>
+
+                <form class="form-inline col-lg-3 mx-auto justify-content-center">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Your Favs" aria-label="Search">
+                </form>
+            
+            </div>
+        
+        </nav>
+    </header>
+
+    <!-- Section Starts here -->
+    <section class="container p-0 m-0 mx-auto">
+        <div class="innersection row bg-danger">
+        <div class="cart-details mt-3 col-lg-8 col-md-7 col-12" id="footItem">
+
+            <div class="card p-2 m-0 col-12 mb-3" id="food-id">
+                <div class="row no-gutters">
+                    <div class="col-4 bg-dark">
+                        <img class="mr-2" src="" alt="..." id='food-img'/>
+                    </div>
+                    <div class="col-8 ">
+                        <div class=" pl-2 m-0 card-body">
+                            <h5 class="card-title text-danger" id='foodTitle'>Card title<span class=" text-success" id="foodPrice">food price</span></h5>
+                            <p class="card-text " id='foodDescription'> When it comes to pizza, the Neapolitan has to be the first featured, especially given that it was the first type of pizza created.</p>
+                           <!-- <p class="card-text"><small class="text-dark">Price</small></p> -->
+                            <div class="cart-Btn m-0">
+                                <button type="button" class="cart-Btn-price p-1 m-0 btn btn-success col-lg-4">Place Order</button>
+                                <button type="button" class="ml-5 cart-Btn-price p-1  btn btn-danger col-lg-4">Remove</button>
+                                <div class="item-qty col-lg-4 mr-5">
+                                    <button type="button" class="cart-Btn-update   btn btn-dark ">+</button>
+                                    <input type="number" id="itemQty" style="width:70px;height:35px" class="m-2 rounded text-center" placeholder="Qty"></input> 
+                                    <button type="button" class="cart-Btn-update   btn btn-dark ">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+
+        <div class="User-details col-lg-4 col-md-5 col-12 mt-3 bg-danger ">
+            <div class="card User-details-cart col-12 mb-3 bg-white">
+                <div class="no-gutters" id='UserDetails'>    
+        </div>
+    </div>
+    </section>
+
+      <!-- Footer Starts here -->
+    <footer class="container-fluid bg-dark">
+        <div class="inside-footer container row p-5">
+            <div class="col-4 foot-div1">
+                <img class="footer_logo" src="https://www.codester.com/static/uploads/items/000/018/18519/preview-xl.jpg" >
+            </div>
+            <ul class="footlist col-8 row">
+                <div class="footer-listset pl-5 col-12">
+                <li class="col1">Near By</li>
+                <li class="col1">Services</li>
+                <li class="col1">About us</li>
+                </div>
+                <div class="footer-listset pl-5 col-12">
+                <li class="col2">Contact us</li>
+                <li class="col2">Feedbacks</li>
+                <li class="col2">Supporters</li>
+                </div>
+            </ul>
+        <div class="copyrights col-12 mt-5">
+            <p class="text-center text-white">Copyrights @2022. All Rights Reserved </p>
+        </div>
+        </div>
+    </footer>
+    </div>
+<script>
+        
+
+let foodList=JSON.parse(localStorage.getItem("food_list"));
+let gotItem=JSON.parse(localStorage.getItem("Cart-Items"));
+let element="";
+let id=0;
+console.log(gotItem);
+for(let i=0;i<gotItem.length;i++){
+    if(gotItem[i]==foodList[i].foodId)
+    console.log(gotItem[i]);
+    // console.log(foodList[i].foodId);
+    {
+    element = element +  "<div class='card p-2 m-0 col-12 mb-3' id="+ foodList[i].foodId +">"
+        +    "<div class='row no-gutters'>"  +  "<div class='col-4 bg-dark img-fluid'>"+ "<img class='mr-2 img-fluid border border-dark' style='min-width:100%;height:225px' src="+ foodList[i].foodImg +" alt='...' id='food-img'/></div>"
+        +   "<div class='col-8 '><div class='pl-3 m-0 card-body'>" 
+        +    "<h5 class='card-title text-danger' id='foodTitle'>"+ foodList[i].foodTitle +"<span class='text-success ml-2' id='foodPrice'>@ "+foodList[i].foodPrice+"/-</span></h5>"
+        +    "<p class='card-text' id='foodDescription'>" +foodList[i].foodDes+"</p>"
+        +    "<div class='cart-Btn m-0'><button type='button' class='cart-Btn-price p-1 m-0 btn btn-success col-lg-4' onclick=placeOrder("+id +")>Place Order</button>"
+        +    "<button type='button' class='ml-5 cart-Btn-price p-1  btn btn-danger col-lg-4'>Remove</button>"
+        +    "<div class='item-qty col-lg-4 mr-5'><button type='button' class='cart-Btn-update btn btn-dark' onclick='stepDown()'>-</button>"
+        +    "<input type='number' id='itemQty' style='width:70px;height:35px' class='m-2 rounded text-center' min='0' name='quantity' value='1' type='number'></input> "
+        +   "<button type='button' class='cart-Btn-update btn btn-dark' onclick='stepUp()'>+</button>"
+        +   "</div></div></div></div></div></div></div>"
+   }
+   id++;
+}
+
+function stepDown(){
+   let num=document.getElementById('itemQty').value;
+   let sum=num--;
+   console.log(num);
+   document.getElementById('itemQty').innerHTML=sum;
+}
+function stepUp(){
+    let num=document.getElementById('itemQty').value;
+   let sum=num++;
+   console.log(num);
+   document.getElementById('itemQty').innerHTML=sum;
+}
+document.getElementById("footItem").innerHTML=element;
+
+let userDetails=JSON.parse(localStorage.getItem("user_details"));
+let loginStatus = JSON.parse(localStorage.getItem("login_status"));
+console.log(loginStatus);
+let userData=""; 
+for(let i=0;i<userDetails.length;i++)
+{
+    if(loginStatus.username==userDetails[i].name){
+
+    userData= userData+"<h3 class='User-details-header text-center mt-4 mb-4 pb-2'>User Details</h3>"
+            +  "<label class='h5 text-center  d-block border-bottom'>Name</label>"
+            +  "<h3 class='text-center text-danger mt-3 h5' id=''>"+userDetails[i].name+"</h3>"
+            +  "<label class='h5 text-center d-block border-bottom mt-4'>Gmail</label>"
+            +  "<h3 class='text-center mt-3 text-danger h5' id=''>"+userDetails[i].email+"</h3>"
+            +  "<label class='h5 text-center d-block border-bottom mt-4'>Contact No</label>"
+            +  "<h3 class='text-center mt-3 text-danger h5' id=''>"+userDetails[i].contact+"</h3>"
+            +  "<label class='h5 text-center d-block border-bottom mt-4'>Address</label>"
+            +  "<h3 class='text-center mt-3 text-danger h5' id=''>+Address+</h3>"
+    }
+}
+document.getElementById("UserDetails").innerHTML=userData;
+
+//Place Order Function Calling
+function placeOrder(id){
+
+    let gotItem=JSON.parse(localStorage.getItem("Cart-Items"));
+    let qty=document.getElementById('itemQty').value;
+    // console.log(gotItem);
+    // console.log(qty);
+
+    let orderItem;
+  
+    console.log(gotItem); 
+        console.log(id);
+    console.log(gotItem==id);
+    orderItem = gotItem.splice(id,1); 
+    console.log(orderItem);
+    location.reload();
+    if(!localStorage.getItem("Order_Items"))
+    {
+        localStorage.setItem("Order_Items",JSON.stringify([]))  
+    }
+    
+   let OrderItemArr = JSON.parse(localStorage.getItem("Order_Items"));
+    OrderItemArr.push(orderItem[0]);
+
+    localStorage.setItem("Cart-Items",JSON.stringify(gotItem));
+    localStorage.setItem("Order_Items", JSON.stringify(OrderItemArr));
+    window.location.href = "orderpage.html?id=" + id ; 
+    window.location.href = "orderpage.html?qty=" + qty;
+}
+</script>
+<script src="./js/user.js"></script>
+    <script src="./js/mdb.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    </body>
+    </html>

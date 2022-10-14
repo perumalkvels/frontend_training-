@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/validate.css">
+    <title>Sign-Up</title>
+</head>
+
+<body>
+<div class="container">
+<form id="form" class="form">
+        <h2 style="color:white">Register | Sign-Up</h2>
+        <div class="form-control">
+            <label class="text-white" for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+            <small id="errorText">Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email">
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="password2">Confirm Passsword</label>
+            <input type="password" id="password2" placeholder="Enter password again">
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="contact">Mobile No</label>
+            <input type="number" id="contact" placeholder="Enter Mobile Number">
+            <small>Error message</small>
+          </div>
+        <button type="submit">Sign-Up</button>
+        </br>
+        </br>
+        <div class="span">
+        <span class="login mt-5">Already have an account ?<a href="login.html" target="">login</a></span>
+    </div>
+    </form>
+</div>
+
+<!-- ........Scripting for Sign-Up.......   -->
+<script>
+
+//Getting User inputs  
+
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
+const contact = document.getElementById('contact');
+
+// add a addEventListener for submit action
+
+form.addEventListener('submit', e => {
+
+    //Function calls.....
+    e.preventDefault();
+    checkInput();
+    add_details();
+});
+
+//here a function define for check the inputs 
+function checkInput() {
+
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
+    const contactValue = contact.value.trim();
+
+    if (usernameValue === '') {
+        setError(username, 'Username Cannot be Blank');
+    }
+    else {
+        setSuccess(username);
+    }
+
+    if (emailValue === '') {
+
+        setError(email, 'Email Cannot be Blank');
+
+    } else if (!isEmail(emailValue)) {
+
+        setError(email, 'Email is not valid');
+    }
+    else {
+        setSuccess(email);
+    }
+
+    if (passwordValue === '') {
+        setError(password, 'Password is required');
+    }
+    else if (passwordValue.length < 8 && passwordValue.length > 12) {
+        setError(password, 'Password must be 8 to 12 digits');
+    }
+    else {
+        setSuccess(password);
+    }
+
+    if (password2Value === '') {
+        setError(password2, 'confirm password is required');
+    }
+    else if (password2Value != passwordValue) {
+        setError(password2, 'Passwords Does not Match');
+    }
+    else {
+        setSuccess(password2);
+    }
+
+    if (contactValue === '') {
+        setError(contact, 'Mobile Number is required');
+    }
+    else if (contactValue.length !== 10) {
+        setError(contact, 'Mobile Number Must be 10 digits');
+    }
+    else {
+        setSuccess(contact);
+    }
+}
+
+    //here a function for setError
+    function setError(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'form-control error';
+        small.innerText = message;
+    }
+    //here a function for setSuccess
+    function setSuccess(input) {
+        const formControl = input.parentElement;
+        formControl.className = 'form-control success';
+    }
+    //here a function isEmail
+    function isEmail(email) {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    }
+
+
+
+    // Check and Set a local storage.....
+    if (!localStorage.getItem("user_details")) {
+        localStorage.setItem("user_details", JSON.stringify([]))
+    }
+    let login_list = JSON.parse(localStorage.getItem("user_details"));
+
+    // addEventListener Function Define.....
+    function add_details() {
+
+        const details = {
+            name: document.getElementById('username').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value,
+            password2: document.getElementById('password2').value,
+            contact: document.getElementById('contact').value,
+        }
+
+        if (login_list == "") {
+
+            login_list.push(details);
+            localStorage.setItem("user_details", JSON.stringify(login_list));
+        }
+        else {
+            let lastVal = login_list.length - 1;
+            for (i = 0; i < login_list.length; i++) {
+
+                if (login_list[i].name == details.name && login_list[i].contact == details.contact) {
+
+                    alert("User Name Already Exist!!!");
+                    break;
+                }
+                else {
+                    if (i == lastVal) {
+                        login_list.push(details);
+                        localStorage.setItem("user_details", JSON.stringify(login_list));
+                        alert("Register Successfully !!!");
+                        login_list = "";
+                        document.getElementById('form').reset();
+                        window.location.href = "./login.html";
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

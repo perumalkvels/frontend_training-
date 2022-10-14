@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/validate.css">
+    <title>Login</title>
+</head>
+
+<body>
+<div class="container">
+    <form id="form" class="form">
+        <h2 style="color:white">Login</h2>
+        <div class="form-control">
+            <label class="text-white" for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+            <small id="errorText">Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <small>Error message</small>
+        </div>
+        <button type="submit">Login</button>
+        </br>
+        </br>
+        <div class="span">
+            <span class="login">If Don't have an account ?<a href="./sign_up.html" target="">Sign-up</a></span>
+        </div>
+    </form>    
+</div>
+
+<!-- ........Scripting for login.......   -->
+                
+<script>
+    //Getting User inputs 
+    const form = document.getElementById('form');
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
+
+    // add a addEventListener for submit action
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        checkInput();
+        login();
+    });
+
+    //here a function define for check the inputs 
+    function checkInput() {
+
+        const usernameValue = username.value.trim();
+        const passwordValue = password.value.trim();
+
+        if (usernameValue === '') {
+            setError(username, 'Username Cannot be Blank');
+        }
+        else {
+            setSuccess(username);
+        }
+        if (passwordValue === '') {
+            setError(password, 'Password is required');
+        }
+        else {
+            setSuccess(password);
+        }
+    }
+
+    //here a function for setError
+    function setError(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'form-control error';
+        small.innerText = message;
+    }
+    //here a function for setSuccess
+    function setSuccess(input) {
+        const formControl = input.parentElement;
+        formControl.className = 'form-control success';
+    }
+
+
+    if (!localStorage.getItem("user_details")) {
+        alert("Please Signin First");
+    }
+    let login_list = JSON.parse(localStorage.getItem("user_details"));
+
+    function login() {
+
+        let name = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+
+        let lastVal = login_list.length - 1;
+        for (i = 0; i < login_list.length; i++) {
+
+            if (login_list[i].name == name && login_list[i].password == password) {
+
+                updateStatus();
+                alert("Successfully Login !!! Welcome" + name);
+                document.getElementById('form').reset();
+                window.location.href = "index.html?name=" + login_list[i].name;
+                break;
+
+            }
+            else {
+                // console.log(login_list[i].name);
+                // console.log(login_list[i].password);
+                // console.log(password);
+                // console.log(name);
+                if (i == lastVal) {
+                    alert("Check Your Username and Password!!!");
+                }
+            }
+
+        }
+    }
+
+    function updateStatus() {
+        let userStatus = {
+            username: login_list[i].name,
+            status: "online",
+        }
+        if (!localStorage.getItem("login_status")) {
+            localStorage.setItem("login_status", JSON.stringify({}))
+        }
+        localStorage.setItem("login_status", JSON.stringify(userStatus));
+    }
+</script>
+</body>
+</html>
