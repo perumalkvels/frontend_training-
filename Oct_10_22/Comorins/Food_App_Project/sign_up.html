@@ -42,7 +42,10 @@
         <div class="span">
         <span class="login mt-5">Already have an account ?<a href="login.html" target="">login</a></span>
     </div>
+    <br/>
+    
     </form>
+    <a href="index.html" class="redirHome">Back to Home Page</a>
 </div>
 
 <!-- ........Scripting for Sign-Up.......   -->
@@ -60,15 +63,15 @@ const contact = document.getElementById('contact');
 // add a addEventListener for submit action
 
 form.addEventListener('submit', e => {
-
     //Function calls.....
     e.preventDefault();
+    var valid=null;
     checkInput();
-    add_details();
 });
 
 //here a function define for check the inputs 
 function checkInput() {
+
 
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
@@ -76,6 +79,11 @@ function checkInput() {
     const password2Value = password2.value.trim();
     const contactValue = contact.value.trim();
 
+    console.log(usernameValue);
+    console.log(emailValue);
+    console.log(passwordValue);
+    console.log(password2Value);
+    console.log(contactValue);
     if (usernameValue === '') {
         setError(username, 'Username Cannot be Blank');
     }
@@ -99,6 +107,7 @@ function checkInput() {
         setError(password, 'Password is required');
     }
     else if (passwordValue.length < 8 && passwordValue.length > 12) {
+        console.log(hai);
         setError(password, 'Password must be 8 to 12 digits');
     }
     else {
@@ -108,7 +117,7 @@ function checkInput() {
     if (password2Value === '') {
         setError(password2, 'confirm password is required');
     }
-    else if (password2Value != passwordValue) {
+    else if (password2Value !== passwordValue) {
         setError(password2, 'Passwords Does not Match');
     }
     else {
@@ -123,8 +132,20 @@ function checkInput() {
     }
     else {
         setSuccess(contact);
+        
     }
+    if(valid!==true){
+
+     alert("please Enter a Valid Id ");
+    }
+    else{
+        add_details();
+    }
+
 }
+
+
+
 
     //here a function for setError
     function setError(input, message) {
@@ -132,11 +153,14 @@ function checkInput() {
         const small = formControl.querySelector('small');
         formControl.className = 'form-control error';
         small.innerText = message;
+        valid = false;
+        
     }
     //here a function for setSuccess
     function setSuccess(input) {
         const formControl = input.parentElement;
         formControl.className = 'form-control success';
+        valid = true;
     }
     //here a function isEmail
     function isEmail(email) {
@@ -145,14 +169,15 @@ function checkInput() {
 
 
 
+    // addEventListener Function Define.....
+    function add_details() {
+        
     // Check and Set a local storage.....
     if (!localStorage.getItem("user_details")) {
         localStorage.setItem("user_details", JSON.stringify([]))
     }
     let login_list = JSON.parse(localStorage.getItem("user_details"));
 
-    // addEventListener Function Define.....
-    function add_details() {
 
         const details = {
             name: document.getElementById('username').value,
@@ -172,7 +197,6 @@ function checkInput() {
             for (i = 0; i < login_list.length; i++) {
 
                 if (login_list[i].name == details.name && login_list[i].contact == details.contact) {
-
                     alert("User Name Already Exist!!!");
                     break;
                 }

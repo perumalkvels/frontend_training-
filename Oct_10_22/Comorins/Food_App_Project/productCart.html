@@ -87,32 +87,7 @@
     <section class="container p-0 m-0 mx-auto">
         <div class="innersection row bg-danger">
         <div class="cart-details mt-3 col-lg-8 col-md-7 col-12" id="footItem">
-
-            <div class="card p-2 m-0 col-12 mb-3" id="food-id">
-                <div class="row no-gutters">
-                    <div class="col-4 bg-dark">
-                        <img class="mr-2" src="" alt="..." id='food-img'/>
-                    </div>
-                    <div class="col-8 ">
-                        <div class=" pl-2 m-0 card-body">
-                            <h5 class="card-title text-danger" id='foodTitle'>Card title<span class=" text-success" id="foodPrice">food price</span></h5>
-                            <p class="card-text " id='foodDescription'> When it comes to pizza, the Neapolitan has to be the first featured, especially given that it was the first type of pizza created.</p>
-                           <!-- <p class="card-text"><small class="text-dark">Price</small></p> -->
-                            <div class="cart-Btn m-0">
-                                <button type="button" class="cart-Btn-price p-1 m-0 btn btn-success col-lg-4">Place Order</button>
-                                <button type="button" class="ml-5 cart-Btn-price p-1  btn btn-danger col-lg-4">Remove</button>
-                                <div class="item-qty col-lg-4 mr-5">
-                                    <button type="button" class="cart-Btn-update   btn btn-dark ">+</button>
-                                    <input type="number" id="itemQty" style="width:70px;height:35px" class="m-2 rounded text-center" placeholder="Qty"></input> 
-                                    <button type="button" class="cart-Btn-update   btn btn-dark ">-</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        
+               <h2 class="display-3 text-center mt-5 text-white" id="emptyCard-text">Your Card is Empty</h2> 
         </div>
 
         <div class="User-details col-lg-4 col-md-5 col-12 mt-3 bg-danger ">
@@ -147,50 +122,19 @@
     </footer>
     </div>
 <script>
-        
 
-let foodList=JSON.parse(localStorage.getItem("food_list"));
-let gotItem=JSON.parse(localStorage.getItem("Cart-Items"));
-let element="";
-let id=0;
-console.log(gotItem);
-for(let i=0;i<gotItem.length;i++){
-    if(gotItem[i]==foodList[i].foodId)
-    console.log(gotItem[i]);
-    // console.log(foodList[i].foodId);
-    {
-    element = element +  "<div class='card p-2 m-0 col-12 mb-3' id="+ foodList[i].foodId +">"
-        +    "<div class='row no-gutters'>"  +  "<div class='col-4 bg-dark img-fluid'>"+ "<img class='mr-2 img-fluid border border-dark' style='min-width:100%;height:225px' src="+ foodList[i].foodImg +" alt='...' id='food-img'/></div>"
-        +   "<div class='col-8 '><div class='pl-3 m-0 card-body'>" 
-        +    "<h5 class='card-title text-danger' id='foodTitle'>"+ foodList[i].foodTitle +"<span class='text-success ml-2' id='foodPrice'>@ "+foodList[i].foodPrice+"/-</span></h5>"
-        +    "<p class='card-text' id='foodDescription'>" +foodList[i].foodDes+"</p>"
-        +    "<div class='cart-Btn m-0'><button type='button' class='cart-Btn-price p-1 m-0 btn btn-success col-lg-4' onclick=placeOrder("+id +")>Place Order</button>"
-        +    "<button type='button' class='ml-5 cart-Btn-price p-1  btn btn-danger col-lg-4'>Remove</button>"
-        +    "<div class='item-qty col-lg-4 mr-5'><button type='button' class='cart-Btn-update btn btn-dark' onclick='stepDown()'>-</button>"
-        +    "<input type='number' id='itemQty' style='width:70px;height:35px' class='m-2 rounded text-center' min='0' name='quantity' value='1' type='number'></input> "
-        +   "<button type='button' class='cart-Btn-update btn btn-dark' onclick='stepUp()'>+</button>"
-        +   "</div></div></div></div></div></div></div>"
-   }
-   id++;
-}
 
-function stepDown(){
-   let num=document.getElementById('itemQty').value;
-   let sum=num--;
-   console.log(num);
-   document.getElementById('itemQty').innerHTML=sum;
-}
-function stepUp(){
-    let num=document.getElementById('itemQty').value;
-   let sum=num++;
-   console.log(num);
-   document.getElementById('itemQty').innerHTML=sum;
-}
-document.getElementById("footItem").innerHTML=element;
+
+//Get Datas From Local Storage
 
 let userDetails=JSON.parse(localStorage.getItem("user_details"));
 let loginStatus = JSON.parse(localStorage.getItem("login_status"));
-console.log(loginStatus);
+let foodList=JSON.parse(localStorage.getItem("food_list"));
+let gotItem=JSON.parse(localStorage.getItem("Cart-Items"));
+
+
+//Adding User Details In Card Page
+
 let userData=""; 
 for(let i=0;i<userDetails.length;i++)
 {
@@ -207,20 +151,76 @@ for(let i=0;i<userDetails.length;i++)
             +  "<h3 class='text-center mt-3 text-danger h5' id=''>+Address+</h3>"
     }
 }
-document.getElementById("UserDetails").innerHTML=userData;
+document.getElementById("UserDetails").innerHTML=userData;    
+
+
+//Adding Product Details If User Add Items to Cart
+
+let element="";
+let id=0;
+for(let i=0;i<gotItem.length;i++){
+    if(gotItem[i]==foodList[i].foodId)
+   
+    document.getElementById("emptyCard-text").innerHTML="";
+    {
+    element = element +  "<div class='card p-2 m-0 col-12 mb-3' id="+ foodList[i].foodId +">"
+        +    "<div class='row no-gutters'>"  +  "<div class='col-4 bg-dark img-fluid'>"+ "<img class='mr-2 img-fluid border border-dark' style='min-width:100%;height:225px' src="+ foodList[i].foodImg +" alt='...' id='food-img'/></div>"
+        +   "<div class='col-8 '><div class='pl-3 m-0 card-body'>" 
+        +    "<h5 class='card-title text-danger' id='foodTitle'>"+ foodList[i].foodTitle +"<span class='text-success ml-2' id='foodPrice'>@ "+foodList[i].foodPrice+"/-</span></h5>"
+        +    "<p class='card-text' id='foodDescription'>" +foodList[i].foodDes+"</p>"
+        +    "<div class='cart-Btn m-0'><button type='button' class='cart-Btn-price p-1 m-0 btn btn-success col-lg-4' onclick=placeOrder("+id +")>Place Order</button>"
+        +    "<button type='button' class='ml-5 cart-Btn-price p-1  btn btn-danger col-lg-4'>Remove</button>"
+        +    "<div class='item-qty col-lg-4 mr-5'><button type='button' class='cart-Btn-update btn btn-dark' onclick='stepDown()'>-</button>"
+        +    "<input type='number' id='itemQty' style='width:70px;height:35px' class='m-2 rounded text-center' min='0' name='quantity' value='1' type='number'></input> "
+        +   "<button type='button' class='cart-Btn-update btn btn-dark' onclick='stepUp()'>+</button>"
+        +   "</div></div></div></div></div></div></div>"
+   }
+   id++;
+}
+document.getElementById("footItem").innerHTML=element;
+
+
+// function stepDown(){
+//    var num=document.getElementById('itemQty').value;
+//    let sum=num--;
+//    console.log(num);
+//    document.getElementById('itemQty').innerHTML=sum;
+// }
+// function stepDown(){
+//    var value=parseInt(document.getElementById('itemQty').value);
+//    value = isNan(value)?0: value;
+//    value--;
+//     document.getElementById('itemQty').value=value;
+// }
+// function stepUp(){
+//     var value=parseInt(document.getElementById('itemQty').value);
+//    value = isNan(value)?0: value;
+//    value++;
+//     document.getElementById('itemQty').value=value;
+// }
+// function stepUp(){
+//     let num=document.getElementById('itemQty').value;
+//    let sum=num++;
+//    console.log(num);
+//    document.getElementById('itemQty').innerHTML=sum;
+// }
+
+
+
 
 //Place Order Function Calling
 function placeOrder(id){
 
     let gotItem=JSON.parse(localStorage.getItem("Cart-Items"));
     let qty=document.getElementById('itemQty').value;
+    let itemQty = parseInt(qty);
     // console.log(gotItem);
     // console.log(qty);
 
     let orderItem;
   
     console.log(gotItem); 
-        console.log(id);
+    console.log(id);
     console.log(gotItem==id);
     orderItem = gotItem.splice(id,1); 
     console.log(orderItem);
@@ -229,9 +229,13 @@ function placeOrder(id){
     {
         localStorage.setItem("Order_Items",JSON.stringify([]))  
     }
+    let order={
+        ItemId : orderItem[0],
+        quantity : itemQty,
+    }
     
    let OrderItemArr = JSON.parse(localStorage.getItem("Order_Items"));
-    OrderItemArr.push(orderItem[0]);
+    OrderItemArr.push(order);
 
     localStorage.setItem("Cart-Items",JSON.stringify(gotItem));
     localStorage.setItem("Order_Items", JSON.stringify(OrderItemArr));

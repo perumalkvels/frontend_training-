@@ -55,7 +55,7 @@
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col">
-                <p><span class="h2">Your Orders</span><span class="h4 ml-5">Item On the way To Deliver</span></p>
+                <p><span class="h2">Your Orders</span><span class="h4 ml-5" id="orderpageStatus">Item On the way To Deliver</span></p>
         
                 <div class="card border-0 mb-5" id="orderItems">
                   
@@ -66,7 +66,7 @@
         
                     <div class="float-end">
                       <p class="mb-0 me-5 d-flex align-items-center" >
-                        <span class="small text-muted mx-auto">Order total:</span><span class="mx-auto mr-5 py-5" 
+                        <span class="small text-muted mx-auto h4">Order total:</span><span class="mx-auto mr-5 py-5" 
                         id="totalItem"></span> <span class="lead fw-normal mr-5 pr-5" id="totalAmount"></span>
                       </p>
                     </div>
@@ -110,36 +110,6 @@
 </div>
     <script>
 
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const name = urlParams.get('name');
-    let element;
-    let loginStatus=JSON.parse(localStorage.getItem("login_status"));
-    if(name==loginStatus.username || loginStatus.username!=""){
-    element="<a class='nav-link'  href='#' ><span class='mr-3 h4 text-white p-0'>hi !</span><span class='text-warning h4' >"+loginStatus.username+"</span><button class='badge user-logout badge-pill ml-3 badge-warning'onclick='userLogout()'><span class='p-4 text-center'>Logout<span></button></a> ";
-    document.getElementById("user_status").innerHTML=element;
-    
-    }
-
-    function userLogout(){
-        localStorage.removeItem("login_status");
-        document.location.reload(true);
-    }
-
-function isUserAlive(){
-    // alert("hai");
-    if(!localStorage.getItem("login_status")){
-                alert("Please Login to Enter Cart");
-            }
-            else{
-                
-                window.location.href = "productCart.html";
-            }
-    }
-    const itemId = urlParams.get('id');
-    const itemQty = urlParams.get('qty');
-    // console.log(itemQty);
-
    let orderItems=JSON.parse(localStorage.getItem("Order_Items"));
     let foodList=JSON.parse(localStorage.getItem("food_list"));
 
@@ -152,16 +122,18 @@ function placeOrder(){
       // console.log(typeof(orderItems[i]));
         if(foodList[i].foodId=orderItems[i]){
           
-        order = order+ "<div class='card-body border mt-3 p-4 ' id='"+ itemId +"'><div class='row align-items-center'><div class='col-md-3'>"
+          foodList[i].foodPrice = foodList[i].foodPrice*orderItems[i].quantity;
+
+        order = order+ "<div class='card-body border mt-3 p-4 ' id='"+ orderItems[i].itemId +"'><div class='row align-items-center'><div class='col-md-3'>"
                 +  "<img src='"+foodList[i].foodImg  +"' class='img-fluid' style='max-width:100%;max-height:150px' id='food-img'></div>"
                 +  "<div class='col-md-3 d-flex justify-content-center'><div>"
-                +  "<h5 class='text-muted mb-4 pb-2 h5'>Name</h5>"
+                +  "<h5 class='text-muted mb-4 pb-2 h5 text-center'>Name</h5>"
                 +  "<p class='lead fw-normal mb-0 text-center'>"+ foodList[i].foodTitle +"</p></div></div>"
                 +  "<div class='col-md-3 d-flex justify-content-center'><div>"
-                +  "<h5 class='text-muted mb-4 pb-2 h5'>Quantity</h5>"
-                +  "<p class='lead fw-normal mb-0 text-center'>"+ itemQty +"</p></div></div>"
+                +  "<h5 class='text-muted mb-4 pb-2 h5  text-center'>Quantity</h5>"
+                +  "<p class='lead fw-normal mb-0 text-center'>"+ orderItems[i].quantity +"</p></div></div>"
                 +  "<div class='col-md-3 d-flex justify-content-center'><div>"
-                +  "<h5 class='text-muted mb-4 pb-2 h5'>Price</h5>"
+                +  "<h5 class='text-muted mb-4 pb-2 h5  text-center'>Price</h5>"
                 +  "<p class='lead fw-normal mb-0 text-center'>"+ foodList[i].foodPrice +"</p></div></div></div></div>"
         }
     }
@@ -195,9 +167,8 @@ document.getElementById("totalItem").innerHTML=count+" Items";
 }
 updateAmount();
 
-
-
-    </script>
+</script>
+    <script src="./js/user.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
 

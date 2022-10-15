@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="logincontainer container">
     <form id="form" class="form">
         <h2 style="color:white">Login</h2>
         <div class="form-control">
@@ -27,7 +27,9 @@
         </br>
         <div class="span">
             <span class="login">If Don't have an account ?<a href="./sign_up.html" target="">Sign-up</a></span>
+            <a href="index.html" style="display:inline-block; top: 89%; left: 41%;" class="redirHome">Back to Home Page</a>
         </div>
+       
     </form>    
 </div>
 
@@ -81,7 +83,9 @@
 
 
     if (!localStorage.getItem("user_details")) {
+        window.location.href = "sign_up.html"; 
         alert("Please Signin First");
+        
     }
     let login_list = JSON.parse(localStorage.getItem("user_details"));
 
