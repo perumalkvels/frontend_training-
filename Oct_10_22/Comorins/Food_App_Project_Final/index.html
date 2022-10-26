@@ -122,7 +122,7 @@
                     <h4>Most Wanted Chicken Styles to Eat in ' KFC '</h4>
                     <p>When it comes to the best type of food to order at a restaurant, it does not get much better than pizza. Pizza is a universal favorite across the world, and it is easy to see why.</p>
                 </div>
-                <button href="#" class="btn btn-danger btn-sm float-right mobile-block" onclick="brandKfc('KFC','foot-Kfc')">Check More Chickens</button>
+                <button href="#" class="btn btn-danger btn-sm float-right mobile-block" onclick="foodbrand('KFC','foot-Kfc')">Check More Chickens</button>
                 <div class="clearfix"></div>
         
             </div>
@@ -136,6 +136,14 @@
                 <div class="col-md-4 ">
                     <img class="image-fluid" style="max-width:350px;" src="./images/bannerKfc.png"/>
                 </div>
+                <div class="col-md-8">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="float-left">
+                            <h4>Most Wanted Chiken Varaities to Eat in KFC</h4>
+                            <p>When it comes to the best type of food to order at a restaurant, it does not get much better than Chicken. Chicken is a universal favorite across the world, and it is easy to see why.</p>
+                        </div>
+                      </div>
+                </div>
             </div>
 
             <!-- For McDonald's -->
@@ -145,7 +153,7 @@
                     <h4>Most Popular Pizza Styles to Eat in McDonald's</h4>
                     <p>When it comes to the best type of food to order at a restaurant, it does not get much better than pizza. Pizza is a universal favorite across the world, and it is easy to see why.</p>
                 </div>
-                <a href="#" class="btn btn-danger btn-sm float-right mobile-block" onclick="brandKfc('mcdonald','foot-mcdonald')"> Check More Burger Styles</a>
+                <a href="#" class="btn btn-danger btn-sm float-right mobile-block" onclick="foodbrand('mcdonald','foot-mcdonald')"> Check More Burger Styles</a>
                 <div class="clearfix"></div>
         
             </div>
@@ -170,6 +178,7 @@
                 <div class="col-md-4 ">
                     <img class="image-fluid" style="max-width:350px;" src="./images/mcDonaldsbanner.jpg"/>
                 </div>
+                
             </div>
 
             <!-- For PizzaHut -->
@@ -179,7 +188,7 @@
                     <h4>Most Popular Pizza Styles to Eat in PizzaHutz</h4>
                     <p>When it comes to the best type of food to order at a restaurant, it does not get much better than pizza. Pizza is a universal favorite across the world, and it is easy to see why.</p>
                 </div>
-                <a href="#" class="btn btn-danger btn-sm float-right mobile-block" onclick="brandKfc('pizzahut','foot-pizzahut')"> Check More Pizza Styles</a>
+                <a href="#" class="btn btn-danger btn-sm float-right mobile-block" onclick="foodbrand('pizzahut','foot-pizzahut')"> Check More Pizza Styles</a>
                 <div class="clearfix"></div>
         
             </div>
@@ -238,10 +247,11 @@
 
     // Function Define KFC Products
     
-    function brandKfc(para, elementid) {
+    function foodbrand(para, elementid) {
         let foodList = JSON.parse(localStorage.getItem("food_list"));
         let insertElement = "";
         console.log(elementid);
+
         for (let i = 0; i < foodList.length; i++) {
 
             if (foodList[i].foodBrand == para) {
@@ -257,7 +267,20 @@
                     + "<small class='h6' id='food-price' >Buy Now @<span>" + foodList[i].foodPrice + "</span>/-</small></div></div></div>"
             }
         }
+
         document.getElementById(elementid).innerHTML = insertElement;
+        // windows.location="#elementid+';
+        //if(elementid=="foot-pizzahut"){
+        //     windows.location="#foot-pizzahut";
+        // }
+        // else if(elementid=="foot-mcdonald"){
+        //     windows.location="#foot-mcdonald"; 
+        // }
+        // else{
+        //     windows.location="#foot-Kfc"; 
+        // }
+        // document.getElementById(elementid).scrollIntoView();
+        
     }
 
 
