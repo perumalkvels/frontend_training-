@@ -1,0 +1,38 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <h1>Click the Button to Get Data</h1>
+
+    <button>click to change </button>
+
+    <code id="code"> </code>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"> </script>
+
+    <script>
+            
+        $(document).ready(function () {
+
+            alert("Hai J-Query Initialized");
+
+            $("button").click(function(){
+                $.ajax({
+                    url : "https://jsonplaceholder.typicode.com/posts/1",
+
+                    success : function(data){
+                        console.log(data);
+                        $("#code").html(JSON.stringify(data));
+                    }
+                })
+            })
+
+        })
+    </script>
+</body>
+
+</html>

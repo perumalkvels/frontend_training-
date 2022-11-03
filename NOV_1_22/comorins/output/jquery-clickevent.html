@@ -1,0 +1,51 @@
+<html>
+    <head>
+
+        <style>
+            .active{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <h1>Hai Im Perumal</h1>
+            
+            
+        </div>
+        <h2> I CAN CHANGE MY COLOR USING BUTTON </h2>
+
+        <button>click to change </button>
+        
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"> </script>
+
+        <script>
+            
+            // Syntax for jquery -  $(selector).action();
+
+            $(document).ready(function(){
+
+               alert("Hai J-Query Initialized");
+
+               $("button").click(function(){
+
+                    $("#wrapper").html("<p> Hai Im Perumal</p>");
+
+                    $("#wrapper p").css("color","red");
+
+                    //active class 
+
+                    $("h2").toggleClass("active");
+
+               }
+               )
+
+            })
+        </script>
+    </body>
+</html>

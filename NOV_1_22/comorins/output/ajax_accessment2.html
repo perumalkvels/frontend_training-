@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1 class="display-4 m-5 text-center"> Table of Contents </h1>
+
+    <table class="table container">
+        <thead>
+          <tr class="row">
+            <th scope="col" class="col-1">id</th>
+            <th scope="col" class="col-5">todo</th>
+            <th scope="col" class="col-3">completed</th>
+            <th scope="col" class="col-3">userId</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+
+      </table>
+     
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>    
+        $(document).ready(function(){
+            $.ajax({
+                    url : "https://dummyjson.com/todos",
+
+                    success:function(data){
+                        datas=data.todos;
+                        let element="";
+                        for(let i=0;i<datas.length;i++){
+                            element='<div class="card col-3 "><div class="card-body"><h5 class="card-title">'+datas[i].id+'</h5><p style="min-height: 50px;" class="card-text">'+datas[i].todo+'</p><p style="font-weight: bold;" class="card-text">'+datas[i].completed+'</p></div></div>'
+                            $("#table-body").append(element);
+                        }
+                      }
+
+                  //   success : function(data){
+                  //     datas = data.todos;
+                  //     console.log(datas);
+                        
+                  //       for(let i=0;i<=datas.length;i++){
+                  //          let element = "";
+                  //         if(i%2==0)
+                  //         {
+                  //           element =  "<tr class='row '>"
+                  //                      +  "<td scope='col' class='col-1'>"+datas[i].id+"</th>"
+                  //                      +  "<th scope='col' class='col-5'>"+datas[i].todo+"</th>"
+                  //                      +  "<th scope='col' class='col-3'>"+datas[i].completed+"</th>"
+                  //                      +  "<th scope='col' class='col-3'>"+datas[i].userId+"</th></tr>"
+                         
+                  //         }
+                  //         else{
+                  //           element =  "<tr class='row bg-info text-white'>"
+                  //                       +  "<td scope='col' class='col-1'>"+datas[i].id+"</th>"
+                  //                       +  "<th scope='col' class='col-5'>"+datas[i].todo+"</th>"
+                  //                       +  "<th scope='col' class='col-3'>"+datas[i].completed+"</th>"
+                  //                       +  "<th scope='col' class='col-3'>"+datas[i].userId+"</th></tr>"
+                          
+                  //         }
+                  //         $("#table-body").append(element);
+                  //     }
+                  // }
+})
+
+        })
+    </script>
+</body>
+</html>
