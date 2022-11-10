@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Part 2</p>
+    <script>
+
+        // Ex : 1 - Default Arguments
+
+        // function sum(a=1,b=a+1){
+        //     let sum = 0;
+        //     sum = a+b;
+        //     return sum;
+        // }
+
+        // let arg1 = sum(a=10,b=20);
+        // console.log('Result of Arg1  is: '+arg1);
+        // let arg2 = sum(a=30);
+        // console.log('Result of Arg2  is: '+arg2);
+
+        // 2) Ex : 2 - Static 
+
+        // class User{
+        //     constructor(){
+        //         this.name = 'peru';
+        //         this.greet = function(){
+        //             console.log(`hi ${name} Welcome to JS Advance Class`);
+        //         }
+        //     }
+        // }
+        // let user1 = new User();
+        // user1.greet();
+
+        // 3) Ex : 3 - 
+
+        // let object1 = { name: 'Microsoft', foundedIn: 1975, business: 'software' };
+        // let object2 = { name: 'IBM', foundedIn: 1989, business: 'software' };
+        // let object3 = { name: 'Microsoft', foundedIn: 1975, business: 'software' };
+        // let object4 = { name: 'Microsoft', foundedIn: 1990, business: 'software' };
+
+        // let checkProp = (ob1, ob2) => {
+        //     for (let key in ob2) {
+        //         console.log(ob1[key] + '==' + ob2[key]);
+        //         if (ob1[key] !== ob2[key]) {
+        //             return false;
+        //             break;
+        //         }
+        //     }
+        //     return true;
+        // }
+        // let arg1 = checkProp(object1, object2);
+        // console.log(arg1);
+
+        // let arg2 = checkProp(object1, object3);
+        // console.log(arg2);
+
+        // let arg3 = checkProp(object1, object4);
+        // console.log(arg3);
+
+        // 4) Ex : 4 
+
+        // method : 1 
+
+        // let arr=[2,1,4,5,6,6,6,8,7,9,8,10];
+        // for(let i=0;i<arr.length;i++){  
+        //     let val = arr[i];
+        //     if(val%2==0){
+        //        let element = arr.splice(i,1);
+        //        i--;
+        //     }
+        // }
+        // console.log(arr);
+        
+       // method : 2
+        
+        // let arr=[2,1,4,5,6,8,7,9,8,10];
+        // let temp = [];
+        // let even = [];
+        // for(let val of arr){ val%2!==0 ?  temp.push(val) : even.push(val)  }
+        // arr = temp;
+        // console.log(`Odd Array is [${arr}] : Even Array is [${[even]}]`);
+
+        
+
+        // 4) Ex : 5 - check null or Undefined
+
+        // let varCheck = (val) => {
+
+        //     typeof (val) == 'undefined' ? console.log('The Varable is Undefined') : 
+            
+        //     val == null ?  console.log('The Value of Varable is null') : 
+            
+        //     console.log('There is a Value present in the variable');
+        // }
+
+        // let x;
+        // let arg1 = varCheck(x);
+
+         // 4) Ex : 6 - nested JSON object
+
+            
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+    // Here A Book is a Main CLASS
+    class Book {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            getDetails() {
+                return `The Book Name is ${this.name} And The Year Of Publishing is ${this.year} `;
+            }
+        }
+
+        class Details extends Book {
+            constructor(name, year, author) {
+                super(name, year);
+                this.author = author;
+            }
+            getDetails() {
+                return super.getDetails() + `Author Name is ${this.author}`;
+                // Here Super Denotes it Parent Class function
+            }
+            getAuthor(){
+                return  `Author Name is ${this.author}`;
+            }
+        }
+
+        let obj = new Details("Red", "2000", "Ravi");
+
+        console.log(obj.getDetails());
+
+        console.log(obj.getAuthor());
+
+    </script>
+</body>
+
+</html>

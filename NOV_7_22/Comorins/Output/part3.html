@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ex - 1 print the properties of person
+
+        // let person = {
+        //     name : 'peru',
+        //     age : '27',
+        //     degree : 'B.Tech',
+        // }
+        // for(let keys in person){
+        //     console.log(keys +' : '+person[keys]);
+        // }
+
+        // ex - 2 multi - dimensional Array
+
+        // let multiArray = (...data) => { 
+        //     let item = [...data];
+        //     let newArr = [];
+        //     console.log(item);
+        //    let result =  item.map((a,b)=>{ 
+        //     console.log(item[a],item[b]);
+        //         let x = [item[a],item[b]];
+                
+        //           newArr.push(x);
+        //         // console.log([a,b]);
+        //     })
+        //     console.log(newArr);
+        // }
+        // let arg1 = multiArray(1,5,9,7,3,6,8,2);
+       
+
+        // ex - 3
+
+        // console.warn("please update Your browser");
+
+        // ex - 4
+
+        // function checkLogin(details) {
+        //     let name = details.userName;
+        //     let password = details.password;
+        // return name == 'peru' && password == 1234 ? alert('Successfull login') : console.error("Invalid Password"); 
+        // }
+        // let loginDetails1= {
+        //     userName : 'peru',
+        //     password : 1234,
+        // }
+        // let try1 = checkLogin(loginDetails1);
+
+        // let loginDetails2= {
+        //     userName : 'peru',
+        //     password : 123,
+        // }
+        // let try2 = checkLogin(loginDetails2);
+
+        // ex - 5
+
+        // ex -8 find if a Object is Empty
+        //method 1
+        // let obj = {};
+        // let checkObject1 = () => {
+        //     for(let key in obj){
+        //         return true;
+        //         break;
+        //     }
+        //     return false;
+        // }
+        // console.log(checkObject1());
+
+        // //method 2
+        // let checkObject2 = Object.keys(obj).length == 0 ? 'Object is Empty' : 'Object is Not Empty';
+        // console.log(checkObject2);
+
+        // //method 3
+        // let checkObject3 = Object.entries(obj).length == 0 ? 'Object is Empty' : 'Object is Not Empty';
+        // console.log(checkObject3);
+
+        // //method 4
+        // let checkObject4 = Object.getOwnPropertyNames(obj).length == 0 ?  'Object is Empty' : 'Object is Not Empty';
+        // console.log(checkObject4);
+
+        // ex - 6 Try Catch Finally
+        
+        // let strLenght = (str) => {
+        //     console.log(typeof(str));
+        //     if(typeof str != "string"){
+        //         let err = Error('It is not a String');
+        //        throw err;
+        //     }
+        // }
+        // let x ='priya';
+        // x=7;
+        // try{
+        //      strLenght(x);
+        // } catch (err){
+        //     alert(err.message);
+        // }
+        // finally {
+        //     console.warn('Please Enter a Valid Data');
+        // }
+        
+       
+        // ex - 9 
+
+        // let arr = [1,2,3,4,3,7,89,9,0];
+
+        // method 1
+        // let method1 = arr.find((val) => val==3);
+        // console.log(method1);
+
+        // // method 2
+        // arr.forEach((val) => {
+        //     if(val == 2){
+        //         console.log('Yes it is Present');
+        //     }
+        // });
+
+        // // method 3
+        // let method3 = arr.includes(89);
+        // console.log(method3);
+
+        // // method 4
+        // let method4 = arr.indexOf(3);
+        // console.log(method4);
+
+        // // method 5
+        // for(let key of arr){
+        //   if(key == 2) {
+        //     console.log('Yes it is Present');
+        //   }
+        // }
+ 
+       
+
+    </script>
+</body>
+</html>

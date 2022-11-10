@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<script>
+function sumOfValues(...arr){
+    let array = [...arr];
+    console.log(array);
+    let sum = 0;
+
+    for(let val of array){
+        sum = sum+val;
+    }
+    return sum;
+}
+let a = [20,20,20,20,20,20,20,20];
+let arg1 = sumOfValues(...a);
+console.log(arg1);
+
+let arg2 = sumOfValues(3,4,5,6,...[2,4,5,6]);
+console.log(arg2);
+</script>
+</body>
+</html>

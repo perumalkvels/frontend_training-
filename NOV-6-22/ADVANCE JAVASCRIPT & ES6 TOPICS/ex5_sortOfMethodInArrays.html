@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<script>
+// let ages = [24,50,20,34,1,4,55];
+
+let person =[
+{name:'Perumal',age:24},
+{name:'Vels',age:25},
+{name:'Arumugam',age:20},
+{name:'Emperuman',age:28},
+]
+
+let sort = person.sort((a,b)=> b.age-a.age);
+console.log('Sort in Decenting Order');
+
+sort.forEach((val)=>{
+    console.log(`${val.name} and his age is ${val.age}`);
+})
+
+</script>
+</body>
+</html>

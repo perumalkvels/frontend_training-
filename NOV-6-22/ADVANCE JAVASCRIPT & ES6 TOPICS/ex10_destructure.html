@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<script>
+let person =[
+{name:'Perumal',street:'North Street'},
+{name:'Vels',street:'South Street'},
+{name:'Arumugam',street:'East Street'},
+{name:'Emperuman',street:'West Street'},
+]
+// let [{name,street}] = person;
+
+// for(let val of [{name,street}]){
+//     console.log(`${val.name} ${val.street}`);
+// }
+// console.log(name);
+// console.log(street);
+
+// [{name,street}].forEach((val) => {
+//     console.log(`${val.name} ${val.street}`);
+// })
+    
+const {name, street} = {name: person.map(a => a.name), 
+                        street: person.map(a => a.street)}
+console.log(name);
+console.log(street);
+
+//ForEach for Name
+name.forEach((val)=>{
+    console.log(val);
+})
+
+//ForEach for Street
+street.forEach((val)=>{
+    console.log(val);
+})
+</script>
+</body>
+</html>

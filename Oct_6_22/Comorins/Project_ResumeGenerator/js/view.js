@@ -1,7 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const name = urlParams.get('name');
-alert(name);
+let name = urlParams.get('name');
+
 let resumeData=JSON.parse(localStorage.getItem("resume_data"));
 for(let i=0;i<resumeData.length;i++){
 if(name==resumeData[i].name){
@@ -20,7 +20,8 @@ document.getElementById("language").innerHTML=resumeData[i].personal.language;
 
 person=resumeData[i];
 let element="";
-//for skill we use a foor loop
+
+
 for(let i=0;i<person.skill.length;i++){
   element=element+ "<li>"+ person.skill[i] +"</li>";
 }

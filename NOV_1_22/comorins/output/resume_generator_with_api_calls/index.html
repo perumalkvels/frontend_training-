@@ -47,12 +47,29 @@
             border-color: black !important;
             box-shadow: none;
         }
-
+        
         .edu_table {
+            /* position: relative; */
             padding: 30px;
             margin: 0 auto;
             text-align: center;
             border: 2px dotted white;
+        }
+        .edu_table_boxes{
+            display:flex;
+            /* justify-content: center; */
+            font-size: 20px;
+            font-weight: bold;
+            margin: 30px 25%;
+
+        }
+        .edu_table_boxes input{
+            
+            padding : 20px;
+            height:20px;
+            width:20px;
+            /* margin-left: 20px;*/
+            
         }
 
         .edu_table th {
@@ -155,8 +172,30 @@
         </div>
 
         <table class="edu_table mt-5">
+            
             <h2 class="col-12 text-center text-white">Fill Your Education here</h2>
-            <div>
+
+            <div class="edu_table_boxes text-white">
+                <!-- <button class="btn btn-warning" onclick="decrementValue()">-</button>  -->
+                <!-- <input type="number" class="" id="number" value="0"> -->
+                <!-- <button class="btn btn-warning" onclick="incrementValue()">+</button> -->
+                <!-- <input type="checkbox" class="degrees" id="bg_degree" value="1" name="degrees" onclick="add_edu_details(id,this.value)"/>
+                <label id="bg_degree">BG Degree</label>
+                <input type="checkbox" class="degrees" id="diplamo" value="1" name="degrees" onclick="add_edu_details(id,this.value)"/>
+                <label id="diplamo">Diplamo</label>
+                <input type="checkbox" class="degrees" id="hsc" value="1" name="degrees" onclick="add_edu_details(id,this.value)"/>
+                <label id="hsc">HSC</label>
+                <input type="checkbox" class="degrees" id="sslc" value="1" name="degrees" onclick="add_edu_details(id,this.value)"/>
+                <label id="sslc">SSLC</label> -->
+                <input type="checkbox"  id="bg_degree" name="degrees"/>
+                <label>BG Degree</label>
+                <input type="checkbox"  id="diplamo" name="degrees"/>
+                <label>Diplamo</label>
+                <input type="checkbox"  id="hsc" name="degrees"/>
+                <label>HSC</label>
+                <input type="checkbox"  id="sslc" name="degrees"/>
+                <label>SSLC</label>
+            </div>
                 <thead>
                     <tr class="">
                         <th class="mr-4"> <label>#</label></th>
@@ -166,67 +205,25 @@
                         <th class="mr-4"> <label>Percentage</label> </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="edu_body">
+                    
 
-                    <tr class="col-12">
-                        <th> <label>1</label></th>
-                        <td><input type="text" id="education" placeholder="Course"
-                                onkeyup="addDetails(id,this.value,0,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Year"
-                                onkeyup="addDetails(id,this.value,0,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Institute"
-                                onkeyup="addDetails(id,this.value,0,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Percentage"
-                                onkeyup="addDetails(id,this.value,0,placeholder)"></td>
-                    </tr>
 
-                    <tr class="col-12">
-                        <th> <label>2</label></th>
-                        <td><input type="text" id="education" placeholder="Course"
-                                onkeyup="addDetails(id,this.value,1,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Year"
-                                onkeyup="addDetails(id,this.value,1,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Institute"
-                                onkeyup="addDetails(id,this.value,1,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Percentage"
-                                onkeyup="addDetails(id,this.value,1,placeholder)"></td>
-                    </tr>
-
-                    <tr class="col-12">
-                        <th> <label>3</label></th>
-                        <td><input type="text" id="education" placeholder="Course"
-                                onkeyup="addDetails(id,this.value,2,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Year"
-                                onkeyup="addDetails(id,this.value,2,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Institute"
-                                onkeyup="addDetails(id,this.value,2,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Percentage"
-                                onkeyup="addDetails(id,this.value,2,placeholder)"></td>
-                    </tr>
-
-                    <tr class="col-12">
-                        <th> <label>4</label></th>
-                        <td><input type="text" id="education" placeholder="Course"
-                                onkeyup="addDetails(id,this.value,3,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Year"
-                                onkeyup="addDetails(id,this.value,3,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Institute"
-                                onkeyup="addDetails(id,this.value,2,placeholder)"></td>
-                        <td><input type="text" id="education" placeholder="Percentage"
-                                onkeyup="addDetails(id,this.value,2,placeholder)"></td>
-                    </tr>
                 </tbody>
-            </div>
         </table>
 
         <div class="skills row">
-
             <h2 class="col-12 mt-5 mb-5 text-center text-white">Let Me Know Your Skills</h2>
-
-            <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,0)" />
-            <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,1)" />
-            <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,2)" />
-            <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,3)" />
+            
+                
+                <button class="btn btn-warning mx-5" id="decrementValue">-</button>
+                <div id="skillSets">
+                    <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,0)" />
+                </div> 
+                <button class="btn btn-warning mx-5" id="incrementValue">+</button>
+            
+            <!-- <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,2)" />
+            <input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,3)" />  -->
 
         </div>
 
@@ -334,29 +331,6 @@
                 </tbody>
             </table>
         </div>
-
-
-  
-  <!-- Modal -->
-  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" id="modal_body">
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
       
     <div id="resume_texts"></div>
     <div id="resume_popup"></div>
@@ -365,15 +339,16 @@
     <script type="text/javascript" src="./js/jquery.min.js"></script>
 
     <script>
+        
         let resume = {};
 
         function addDetails(key, value, index = null, indexkey = null) {
 
-            if (value == "") {
-                alert("Enter a valid data");
-            }
+            // if (value == "") {
+            //     alert("Enter a valid data");
+            // }
 
-            else if (key == "education" || key == "certification" || key == "projects") {
+            if (key == "education" || key == "certification" || key == "projects") {
                 if (!resume[key]) {
                     resume[key] = [];
                 }
@@ -415,6 +390,70 @@
 
         $(document).ready(function () {
 
+            // Get Education Details Dynamically
+
+            var eduValue = 0;
+            var skills = 0;
+
+            $("input[name=degrees]").click(function(){
+                
+                if($(this).is(":checked")){
+                    eduValue = eduValue + 1;
+                    showEducation(eduValue);
+                }
+                else{
+                    eduValue = eduValue - 1;
+                    showEducation(eduValue);
+                }
+
+                function showEducation(val){
+
+                    if(val>0){
+                        let table = "";
+                        for(let i=0;i<val;i++){
+                        table = table + `<tr class="col-12">
+                        <th> <label>1</label></th>
+                        <td><input type="text" id="education" placeholder="Course"
+                                onkeyup="addDetails(id,this.value,`+i+`,placeholder)"></td>
+                        <td><input type="text" id="education" placeholder="Year"
+                                onkeyup="addDetails(id,this.value,`+i+`,placeholder)"></td>
+                        <td><input type="text" id="education" placeholder="Institute"
+                                onkeyup="addDetails(id,this.value,`+i+`,placeholder)"></td>
+                        <td><input type="text" id="education" placeholder="Percentage"
+                                onkeyup="addDetails(id,this.value,`+i+`,placeholder)"></td>
+                        </tr>`
+                        $("#edu_body").html(table);
+                        }
+                    }
+                    else{
+                        $("#edu_body").html("");
+                    }
+                }
+            })
+
+            // Get Skills Input Boxes Dynamically
+
+            $("#incrementValue").click(function(){
+                let element = "";
+                skills = skills+1;
+                for(let i=0;i<=skills;i++){
+                    element = element + `<input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,`+i+`)" />`
+                    $("#skillSets").html(element);
+                }
+            })
+            $("#decrementValue").click(function(){
+                let element = "";
+                skills = skills-1;
+                for(let i=0;i<=skills;i++){
+                    element = element + `<input type="text" id="skill" placeholder="skill" onkeyup="addDetails(id,this.value,`+i+`)" />`
+                    $("#skillSets").html(element);
+                }
+            })
+
+
+
+            // Ajax Starts for Getting Resume Datas in Intial Stage
+
             $.ajax({
 
                 type: "get",
@@ -426,114 +465,40 @@
                     user: "peru",
                 },
                 success: function (response) {
-
-                    var datas = JSON.parse(response);
-
-                    if(datas == ""){
-                        alert("Please Create Your Resume Data");
-                    }
-                    else{
-                        var details = datas.data;
-                    console.log(details);
-
-                    for (let i = 0; i < details.length; i++) {
-                        let array = JSON.parse(details[i].data);
-                        console.log(array.name);
-                        // id='get_res'
-                        let element = "<tr>"
-                            + "<td scope='col'>" + details[i].id + "</td>"
-                            + "<td scope='col'>" + array.name + "</td>"
-                            + "<td scope='col'><button class='btn btn-success  text-white' type='button'  data-toggle='modal' data-target='#exampleModal' value="+array.name+" id='get_res'>Get Resume</button></td>"
-                            + "<td scope='col'><button class='btn btn-danger text-white' id='del_resume' value=" + details[i].id + ">Delete</button></td>"
-                            + "</tr>";
-
-                        $("#resume_list").append(element);
-                    }
-                    }
+                    
+                    showDetails(response);
                 }
             })
 
-            //Delete Details Using Ajax 
+            // After Delete Getting Details Using Ajax 
 
             $("body").on("click","#del_resume",function(){
  
                 var d = $(this).val();
                 console.log(d);
+
                 $.ajax({
+
                     type: "get",
-
                     url: "http://karka.academy/api/action.php",
-
                     data: {
                         request: "delete_user_resume",
                         user: "peru",
                         id: d,
                     },
                     success: function (response) {
-
-                    console.log(response);
-                    // data_generate();
-                    var datas = JSON.parse(response);
-                    var details = datas.data;
-                    console.log(details);
-                    let element = "";
-                    for (let i = 0; i < details.length; i++) {
-                        let array = JSON.parse(details[i].data);
-                        console.log(array.name);
-                        element = element + "<tr>"
-                            + "<td scope='col'>" + details[i].id + "</td>"
-                            + "<td scope='col'>" + array.name + "</td>"
-                            + "<td scope='col'><button class='btn btn-success  text-white' type='button'  data-toggle='modal' data-target='#exampleModal' id='get_res'>Get Resume</button></td>"
-                            + "<td scope='col'><button class='btn btn-danger text-white' id='del_resume' value=" + details[i].id + ">Delete</button></td>"
-                            + "</tr>";
-
-                        $("#resume_list").html(element);
-                    }
+                        showDetails(response);
                     }
                 })
-
             })
 
-
-            // View Details Using Ajax
-            $("body").on("click", "#get_res", function () {
-                
-            var userName = $(this).val();
-            console.log(userName);
-
-            let popup = "<div class='modal' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>"
-                       + "<div class='modal-dialog'><div class='modal-content'>"
-                       + "<div class='modal-header'>"
-                       + "<h5 class='modal-title' id='exampleModalLabel'>hai "+ userName +" !!! </h5>"
-                       + "<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>"
-                       + "<div class='modal-body' id='modal_body'>Here You Can Edit And Generate Your Resume Details!!!</div><div class='modal-footer'>"
-                       + "<button type='button' class='btn btn-secondary' id='resEdit'>Edit</button>"
-                       + "<button type='button' class='btn btn-primary' id='resGen'>Generate Resume</button></div></div></div></div>";
-            
-            $('#resume_popup').html(popup);
-            // $('#myModal').on('shown.bs.modal', function () {
-            //     $('#myInput').trigger('focus')
-            // })
-            $("body").on("click", "#resEdit", function () {
-                alert("Content Under Construction");
-            })
-            $("body").on("click", "#resGen", function () {
-                
-            })
-        })
-
-          
-
-
-            // Adding Details Using Ajax 
+            // After Submission Getting Details Using Ajax 
 
             $("#submit_button").click(function () {
 
                 $.ajax({
                     type: "post",
-
                     url: "http://karka.academy/api/action.php",
-
                     data: {
                         request: "create_resume",
                         user: "peru",
@@ -541,46 +506,68 @@
                     },
 
                     success: function (response) {
-
-                        var datas = JSON.parse(response);
-                        var details = datas.data;
-                        console.log(details);
-                        let element = "";
-                        for (let i = 0; i < details.length; i++) {
-                            let array = JSON.parse(details[i].data);
-                            console.log(array.name);
-                            element = element + "<tr>"
-                                + "<td scope='col'>" + details[i].id + "</td>"
-                                + "<td scope='col'>" + array.name + "</td>"
-                                + "<td scope='col'><button class='btn btn-success text-white' id='get_res'>Get Resume</button></td>"
-                                + "<td scope='col'><button class='btn btn-danger text-white' id='del_resume' value=" + details[i].id + ">Delete</button></td>"
-                                + "</tr>";
-
-                            $("#resume_list").html(element);
-
-                        }
+                            showDetails(response)
                     }
                 })
             })
 
-            // function data_generate() {
-            //         var datas = JSON.parse(response);
-            //         var details = datas.data;
-            //         console.log(details);
-            //         let element = "";
-            //         for (let i = 0; i < details.length; i++) {
-            //             let array = JSON.parse(details[i].data)
-            //             console.log(array.name);
-            //             element = element + "<tr>"
-            //                 + "<td scope='col'>" + details[i].id + "</td>"
-            //                 + "<td scope='col'>" + array.name + "</td>"
-            //                 + "<td scope='col'><button class='btn btn-success text-white' id='get_res'>Get Resume</button></td>"
-            //                 + "<td scope='col'><button class='btn btn-danger text-white' id='del_resume' value=" + details[i].id + ">Delete</button></td>"
-            //                 + "</tr>";
+            // Show Function Definition
 
-            //             $("#resume_list").html(element);
-            //         }
-            //     }
+            function showDetails(response){
+                
+                var datas = JSON.parse(response);
+
+                if(datas == ""){
+                    alert("Please Create Your Resume Data");
+                }
+                else{
+                    var details = datas.data;
+                console.log(details);
+                    let element = "";
+                for(let i=0; i<details.length; i++) {
+
+                    let array = JSON.parse(details[i].data);
+                    console.log(array.name);
+                    element = element + "<tr>"
+                        + "<td scope='col'>" + details[i].id + "</td>"
+                        + "<td scope='col'>" + array.name + "</td>"
+                        + "<td scope='col'><button class='get_res btn btn-success  text-white' type='button'  data-toggle='modal' data-target='#exampleModal' value="+array.name+'+'+details[i].id+" id='"+details[i].id+"'>Get Resume</button></td>"
+                        + "<td scope='col'><button class='btn btn-danger text-white' id='del_resume' value="+ details[i].id +">Delete</button></td>"
+                        + "</tr>";
+                        $("#resume_list").html(element);
+                }
+                
+                }
+            }
+
+            // For Popup
+            $("body").on("click", ".get_res", function () {
+                let details = $(this).val();
+                let fullDetails= details.split("+");
+                let name = fullDetails[0];
+                let id = fullDetails[1];
+
+                // console.log();
+                // console.log(userName);
+    
+                let popup = "<div class='modal' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>"
+                           + "<div class='modal-dialog'><div class='modal-content'>"
+                           + "<div class='modal-header'>"
+                           + "<h5 class='modal-title' id='exampleModalLabel'>hai "+ name +" !!! </h5>"
+                           + "<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>"
+                           + "<div class='modal-body' id='modal_body'>Here You Can Edit And Generate Your Resume Details!!!</div><div class='modal-footer'>"
+                           + "<button type='button' class='btn btn-secondary' id='resEdit'>Edit</button>"
+                           + "<a href='view.html?id="+id+" 'target='_self'><button type='button' class='btn btn-primary' val='"+id+"' id='resGen'>Generate Resume</button></a></div></div></div></div>";
+                
+                $('#resume_popup').html(popup);
+                
+                // $("body").on("click", "#resEdit", function () {
+                //     alert("Content Under Construction");
+                // })
+                // $("body").on("click", "#resGen", function () {
+                        
+                // })
+            })
         })
     </script>
 

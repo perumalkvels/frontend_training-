@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<script>
+    let companies = [ { name : 'Microsoft',foundedIn : 1975 },
+        {name:'TATA', foundedIn : 1968 },
+        {name:'Cognizant', foundedIn : 1994 },
+        {name:'Google',foundedIn : 1998 },
+        {name:'Cisco Systems',foundedIn : 1984 },
+        {name:'Accenture',foundedIn : 1989 },
+        {name:'IBM',foundedIn : 1980 },
+        {name:'Comorins',foundedIn : 2019 },  ];
+
+    //forEach Method
+    companies.forEach((val) => {
+        if(val.foundedIn>1987){
+        console.log('The Company'+val.name+' was Founded in '+val.foundedIn);
+        }
+    })
+    console.log("");
+
+    //Filter Method
+    companies.filter((val) => {
+        if(val.foundedIn>1987){
+        console.log('The Company'+val.name+' was Founded in '+val.foundedIn);
+        }
+    })
+    console.log("");
+
+    //Filter Method with newvariable
+    let filtercompanies = companies.filter((val) => val.foundedIn>1987)
+    for (let val of filtercompanies){
+        console.log(`The Company ${val.name} was Founded in ${val.foundedIn}`);
+    }
+</script>
+</body>
+</html>

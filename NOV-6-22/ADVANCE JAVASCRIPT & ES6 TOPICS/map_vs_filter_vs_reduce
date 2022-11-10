@@ -1,0 +1,9 @@
+//map and filter creates a new array to store the parent array
+
+// Map creates a new array to store the modified version of parent array  
+// Here we dont want to change the parent array
+// Real tym example is : When Big Million day in Flipkart The original price is seprated 
+// and offer price is seperated via new array
+
+// Filter filters the entire elements in a Array and stored a element passed in by a condition to filter
+

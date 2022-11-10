@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+
+       <div id="new"  style="color : red"> </div>
+    <script>
+
+        // *** Ex - 1 ***
+
+        // let companies = ['Microsoft','TATA','Cognizant','Google','Cisco Systems','Accenture','IBM','Comorins'];
+        // let slNo = 0;
+        // companies.forEach((name,slNo) => {
+        //     slNo += 1;
+        //     console.log(slNo+`. `+name);
+        // })
+
+        // console.log('........................');
+
+        // //simplified Form
+
+        // companies.forEach(name => console.log(name));
+
+        // *** Ex - 2 ***
+
+        // let companies = [ { name : 'Microsoft',foundedIn : 1975 },
+        //     {name:'TATA', foundedIn : 1968 },
+        //     {name:'Cognizant', foundedIn : 1994 },
+        //     {name:'Google',foundedIn : 1998 },
+        //     {name:'Cisco Systems',foundedIn : 1984 },
+        //     {name:'Accenture',foundedIn : 1989 },
+        //     {name:'IBM',foundedIn : 1980 },
+        //     {name:'Comorins',foundedIn : 2019 },  ];
+
+        // //forEach Method
+        // companies.forEach((val) => {
+        //     if(val.foundedIn>1987){
+        //     console.log('The Company'+val.name+' was Founded in '+val.foundedIn);
+        //     }
+        // })
+        // console.log("");
+
+        // //Filter Method
+        // companies.filter((val) => {
+        //     if(val.foundedIn>1987){
+        //     console.log('The Company'+val.name+' was Founded in '+val.foundedIn);
+        //     }
+        // })
+        // console.log("");
+
+        // //Filter Method with newvariable
+        // let filtercompanies = companies.filter((val) => val.foundedIn>1987)
+        // for (let val of filtercompanies){
+        //     console.log(`The Company ${val.name} was Founded in ${val.foundedIn}`);
+        // }
+
+        
+        //*** Ex - 3 ***
+
+        // let companies = [ { name : 'Microsoft',start:1943,end:1999,catagory:'non-retail' },
+        //                     {name:'TATA',start:1988,end:1999,catagory:'retail' },
+        //                     {name:'Cognizant', start:1944,end:2003,catagory:'non-retail' },
+        //                     {name:'Google',start:1988,end:1999,catagory:'retail'},
+        //                     {name:'Cisco Systems',start:1944,end:2003,catagory:'non-retail' },
+        //                     {name:'Accenture',foundedIn : 1989 }, ]
+
+        // let retailCompanies = companies.filter((val)=> val.catagory=='retail');
+        // console.log(retailCompanies);
+        // let x ="";
+        // retailCompanies.forEach((element) => {
+        // x = element.name +' - '+element.catagory+' - '+element.start+' - incremented-year: '+parseInt(element.start+1)+ ' ||  ';
+        // document.getElementById("new").append(x); 
+        // });
+        
+
+        // *** Ex - 4 ***
+
+        // let companies = [ { name : 'Microsoft',foundedIn : 1975 },
+        //                     {name:'TATA', foundedIn : 1968 },
+        //                     {name:'Cognizant', foundedIn : 1994 },
+        //                     {name:'Google',foundedIn : 1998 },
+        //                     {name:'Cisco Systems',foundedIn : 1984 },
+        //                     {name:'Accenture',foundedIn : 1989 },
+        //                     {name:'IBM',foundedIn : 1980 },
+        //                     {name:'Comorins',foundedIn : 2019 },  ];
+
+        // let sort = companies.sort((a,b)=>{
+        //     if(a.foundedIn > b.foundedIn)return 1;
+        //     if(a.foundedIn > b.foundedIn)return -1;
+        //     return 0;
+        // })
+
+        // console.log('Sort By Year');
+        // for(let val of sort){
+        //     console.log(`${val.foundedIn} - ${val.name} `);
+        // }
+
+
+        // *** Ex - 5 ***
+
+        // let person = [{ name: 'Perumal', age: 24 },
+        // { name: 'Vels', age: 25 },
+        // { name: 'Arumugam', age: 20 },
+        // { name: 'Emperuman', age: 28 },
+        // ]
+
+        // let sort = person.sort((a, b) => b.age - a.age);
+        // console.log('Sort in Decenting Order');
+
+        // sort.forEach((val) => {
+        //     console.log(`${val.name} and his age is ${val.age}`);
+        // })
+
+
+        // *** Ex - 6 ***
+
+        // let person = [
+        //     { name: 'Perumal', age: 24 },
+        //     { name: 'Vels', age: 25 },
+        //     { name: 'Arumugam', age: 20 },
+        //     { name: 'Emperuman', age: 28 },
+        // ]
+
+        // let totalAge = person.reduce((acc, val) => {
+        //     return acc += val.age;
+        // }, 0)
+
+        // console.log(`Total of All Ages : ${totalAge}`);
+
+
+        // *** Ex - 7 ***
+
+        // let companies = { name: 'Microsoft', 
+        //                   category: 'Software-Company' };
+
+        // let { name, category } = companies;
+        // console.log(name);
+        // console.log(category);
+
+
+        //*** Ex - 8 *** 
+
+        // function sumOfValues(...arr) {
+
+        //     let sum = 0;
+
+        //     for (let val of arr) {
+        //         sum = sum + val;
+        //     }
+        //     return sum;
+        // }
+        // let a = [20, 20, 20, 20, 20, 20, 20, 20];
+        // let arg1 = sumOfValues(...a);
+        // console.log(arg1);
+
+        // let arg2 = sumOfValues(3, 4, 5, 6);
+        // console.log(arg2);
+
+        //*** Ex - 9 ***
+
+        // let addArr = (...arr) => {
+        //     let array = [...arr];
+        //     let newArr = [];
+        //     let sum = 0;
+        //     // console.log(array);
+        //     // array.every((val)=>{ 
+        //     for (let val of array) {
+                
+        //         if (typeof (val) == 'number' || typeof (val) == 'string') {
+        //             newArr.push(val);
+        //         }else {
+        //             for (let ele of val) {
+        //                 sum += ele;
+        //             }
+        //             newArr.push(sum);
+        //         }
+        //     }
+        //     console.log(newArr);
+        // }
+
+        // addArr('a', 4, 6, 'p', 0, 1, 'o');
+
+        // addArr('a', 4, 6, 'p', 0, 1, 'o', [2, 4, 5, 6]);
+
+        //*** Ex - 10 ***
+
+        // let person = [
+        //     { name: 'Perumal', street: 'North Street' },
+        //     { name: 'Vels', street: 'South Street' },
+        //     { name: 'Arumugam', street: 'East Street' },
+        //     { name: 'Emperuman', street: 'West Street' },
+        // ]
+        
+        // const { name, street } = {
+        //     street: person.map(a => a.street),
+        // }
+        // console.log(street);
+
+        //*** Ex - 11 ***
+
+        // let val = 0;
+        // incrementFunction = () => val++;
+        // console.log(incrementFunction());
+        // console.log(incrementFunction());
+        // console.log(incrementFunction());
+
+        //*** Ex - 12 ***
+    </script>
+</body>
+
+</html>

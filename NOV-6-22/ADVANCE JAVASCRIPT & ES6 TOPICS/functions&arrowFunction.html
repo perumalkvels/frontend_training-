@@ -1,0 +1,66 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+
+        //In Normal Object Function 
+
+        const printNumbers = {
+            phrase: 'The current value is:',
+            numbers: [1, 2, 3, 4],
+
+            loop() {
+                // Bind the `this` from printNumbers to the inner forEach function
+                this.numbers.forEach(
+                    function (number) {
+                        console.log(this.phrase, number)
+                    }.bind(this),
+                )
+            },
+        }
+        printNumbers.loop()
+
+        //In Aero Function 
+
+        const printNumbersInArrow = {
+            phrase: 'The current value is:',
+            numbers: [1, 2, 3, 4],
+
+            loop() {
+                this.numbers.forEach((number) => {
+                    console.log(this.phrase, number)
+                })
+            },
+        }
+
+        printNumbersInArrow.loop()
+    </script>
+    <script>
+        //
+
+        let character = [{ key: "name", value: "Gimli" }, { key: "race", value: "dwarf" }, { key: "weapon", value: "battle axe" }, { key: "age", value: 139 }];
+
+        // ES5 equivalent
+        var characterES5 = character.map(function (item) {
+            var obj = {};
+            obj[item.key] = item.value;
+            return obj;
+        }, this);
+
+        console.log("ES5: ", JSON.stringify(characterES5));
+
+        // ES6 Arrow function
+        let characterES6 = character.map((item) => {
+            var obj = {};
+            obj[item.key] = item.value;
+            return obj;
+        });
+
+        console.log("ES6:",characterES6);
+    </script>
+</body>
+
+</html>

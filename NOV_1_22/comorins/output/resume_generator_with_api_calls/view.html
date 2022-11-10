@@ -5,238 +5,342 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
     <style>
-        *{
-            font-family: 'poppins'Arial, Helvetica, sans-serif;
+        * {
+            font-family: 'poppins' Arial, Helvetica, sans-serif;
         }
-        .sidebar_section{
+
+        .sidebar_section {
             text-align: center;
         }
-        .top_list{
-            
-            margin-top: 181px!important;
+
+        .top_list {
+            margin-top: 181px !important;
         }
-        .top_list p{
-            padding-top:15px;
-            padding-bottom:25px;
-           font-size: 20px;
+
+        .top_list p {
+            padding-top: 15px;
+            padding-bottom: 25px;
+            font-size: 20px;
         }
-        .top_list p:last-child{
-            padding-top:15px;
-            padding-bottom:25px;
-           font-size: 15px;
+
+        .top_list p:last-child {
+            padding-top: 15px;
+            padding-bottom: 25px;
+            font-size: 15px;
         }
-        .top_list h3{
-            margin:0 auto;
-            width:60%;
+
+        .top_list h3 {
+            margin: 0 auto;
+            width: 60%;
         }
-        .bottom_border{
-            padding-bottom:10px;
+
+        .bottom_border {
+            padding-bottom: 10px;
             border-bottom: 1px solid white;
         }
-        .bottom_border_dotted{
-            padding-bottom:10px;
+
+        .bottom_border_dotted {
+            padding-bottom: 10px;
             border-bottom: 1px dashed white;
         }
-        .skills{
-            margin:0 auto;
+
+        .skills {
+            margin: 0 auto;
             text-align: center;
         }
-        #skill{
+
+        #skill {
+            
             list-style-type: none;
-            padding-bottom: -20px!important;
+            /* padding-bottom: -20px !important; */
             font-size: 20px;
         }
-        .hobbies{
-            margin-top:50px;
+
+        .hobbies {
+            margin-top: 50px;
         }
-        .hobbies p{
-            padding-bottom: -10px!important;
+
+        .hobbies p {
+            padding-bottom: -10px !important;
             font-size: 20px;
         }
-        .educationDetails{
-            margin-top:20px;
+
+        .educationDetails {
+            margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
- <div class="container">
-    
+    <div class="container">
+
         <div class="row">
-    
+
             <div class="col-3 p-3 sidebar_section bg-secondary text-light">
-    
+
                 <div class="top_list">
                     <h1 class="mt-5 mb-5 bottom_border">Contact</h1>
-    
-                    <h3  class="bottom_border_dotted">Phone No</h3>
+
+                    <h3 class="bottom_border_dotted">Phone No</h3>
                     <p class="mb-3" id="mobile"></p>
-            
-                    <h3  class="bottom_border_dotted">Email</h3>
+
+                    <h3 class="bottom_border_dotted">Email</h3>
                     <p class="mb-3" id="email"></p>
-            
-                    <h3  class="bottom_border_dotted">Address</h3>
+
+                    <h3 class="bottom_border_dotted">Address</h3>
                     <p class="mb-3" id="address"></p>
                 </div>
                 <div class="skills">
                     <h1 class="bottom_border">Skills</h1>
-                        <ul class="" id="skill"></ul>
-                          
+                    <ul class="" id="skill"></ul>
+
                 </div>
                 <div class="hobbies">
-                    <h1 class="bottom_border">Hobbies</h1>    
-                        <ul class="" id="hobbies"></ul>
-                        
-                </div>
-        </div>
+                    <h1 class="bottom_border">Hobbies</h1>
+                    <ul class="" id="hobbies"></ul>
 
-              <div class="col-9 mainbar_section p-3">
-            
-            <!-- Head Details -->
-    
-            <div class="headDetails">
-                <h1 class="mt-5 display-4 font-weight-bold" id="name"></h1>
-                <h3 class="text-secondary mb-4" id="role"></h3>
-                <p id="objective"></p>
-            </div>
-    
-            <!-- Education Details -->
-    
-            <div class="educationDetails">
-                <h2 class="mt-2 mb-3">Education Details</h2>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Sl.No</th>
-                        <th scope="col">Course</th>
-                        <th scope="col">Year</th>
-                        <th scope="col">Institute</th>
-                        <th scope="col">Percentage</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>1</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>3</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>4</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-                </table>
-            </div>
-    
-            <!-- Certification -->
-    
-            <div class="certification">
-                <h2>Certification</h2>
-                <table class="table table-borderless">
-                    <thead>
-                    <tr>
-                        <th scope="col">courcse_name</th>
-                        <th scope="col"> duration </th>
-                        <th scope="col">institute </th>
-                        <th scope="col">yearOfJoining</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-    
-            </div>
-    
-            <!-- Projects -->
-    
-            <div class="Projects">
-                <h2 class="mt-4 mb-3">Projects</h2>
-                <div class="card">
-                    <div class="card-header">
-                    <h3>Mini-Project</h3>
-                    </div>
-                    <div class="card-body">
-                    <h5 class="card-title" id="title"></h5>
-                    <p class="card-text" id="abstract"></p>
-                    </div>
-                </div>
-    
-                <div class="card mt-3">
-                    <div class="card-header">
-                    <h3>Main-Project</h3>
-                    </div>
-                    <div class="card-body">
-                    <h5 class="card-title" id="title"></h5>
-                    <p class="card-text" id="abstract"></p>
-                    </div>
                 </div>
             </div>
-    
-            <!-- Personal Details -->
-    
-            <div class="personalDetails">
-                <h2 class="mt-4 mb-3">Personal Details</h2>
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th scope="col" >Occupation_Name</th>
-                        <td id="occupation"></td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="col" >Date of Birth </th>
-                        <td id="dob"></td>
-                    </tr>
-                    <tr>
-                        <th scope="col" >Marital_status</th>
-                        <td id="maritalStatus"></td>
-                    </tr>
-                    <!-- <tr>
+
+            <div class="col-9 mainbar_section p-3">
+
+                <!-- Head Details -->
+
+                <div class="headDetails">
+                    <h1 class="mt-5 display-4 font-weight-bold" id="name"></h1>
+                    <h3 class="text-secondary mb-4" id="role"></h3>
+                    <p id="objective"></p>
+                </div>
+
+                <!-- Education Details -->
+
+                <div class="educationDetails">
+                    <h2 class="mt-2 mb-3">Education Details</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sl.No</th>
+                                <th scope="col">Course</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Institute</th>
+                                <th scope="col">Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody id="edu_tab_body">
+                            <!-- <tr>
+                                <th>1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Certification -->
+
+                <div class="certification">
+                    <h2>Certification</h2>
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">courcse_name</th>
+                                <th scope="col"> duration </th>
+                                <th scope="col">institute </th>
+                                <th scope="col">yearOfJoining</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cetification_tbody">
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <!-- Projects -->
+
+                <div class="Projects">
+                    <h2 class="mt-4 mb-3">Projects</h2>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Mini-Project</h3>
+                        </div>
+                        <div class="card-body">
+                                <h5 class="card-title" id="mini_pro_title"></h5>
+                                <p class="card-text" id="mini_pro_des"></p>
+                        </div>
+                        </div>
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                <h3>Main-Project</h3>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title" id="main_pro_title"></h5>
+                                <p class="card-text" id="main_pro_des"></p>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Personal Details -->
+
+                <div class="personalDetails">
+                    <h2 class="mt-4 mb-3">Personal Details</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Occupation_Name</th>
+                                <td id="occupation"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="col">Date of Birth </th>
+                                <td id="dob"></td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Marital_status</th>
+                                <td id="maritalStatus"></td>
+                            </tr>
+                            <!-- <tr>
                         <th scope="col" id="emgcontact">Emg. Contact No</th>
                         <td></td>
                     </tr> -->
-                    <tr>
-                        <th scope="col" >BloodGroup</th>
-                        <td id="bg"></td>
-                    </tr>
-                    <tr>
-                        <th scope="col" >Languages</th>
-                        <td id="language"></td>
-                    </tr>
-                    </tbody>
-                </table>
+                            <tr>
+                                <th scope="col">BloodGroup</th>
+                                <td id="bg"></td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Languages</th>
+                                <td id="language"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </div> 
-    <script src="./view.js"></script>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const userId = urlParams.get('id');
+        console.log(userId);
+
+        $(document).ready(function () {
+
+            $.ajax({
+                type: "get",
+                url: "http://karka.academy/api/action.php",
+                data: {
+                    request: "get_resume_by_id",
+                    user: "peru",
+                    id: userId,
+                },
+                success: function (response) {
+                    let data = JSON.parse(response);
+                    let details = JSON.parse(data.data.data);
+                    console.log(details);
+
+                    $("#name").html(details.name);
+                    $("#role").html(details.role);
+                    $("#mobile").html(details.mobile);
+                    $("#email").html(details.email);
+                    $("#address").html(details.address);
+                    $("#objective").html(details.objective);
+
+                    let personal = details.personal;
+                    $("#occupation").html(personal.occupatioName);
+                    $("#dob").html(personal.dob);
+                    $("#maritalStatus").html(personal.maritalStatus);
+                    $("#bg").html(personal.bloodGroup);
+                    $("#language").html(personal.language);
+
+                    //for skill 
+                    let element = "";
+                    let skill = details.skill;
+                    for (let i = 0; i < skill.length; i++) {
+                       element = ` <li> ${skill[i]}  </li>`;
+                       $("#skill").append(element);
+                    }
+
+                    //for hobbies 
+                    let hobbies = details.hobbies;
+                    console.log(hobbies[0]);
+                    for (let i=0; i<hobbies.length; i++) {
+                       element = ` <li> ${hobbies[i]}  </li>`;
+                       $("#hobbies").append(element);
+                    }
+
+                    //for cetification
+                    let certification = details.certification;
+                    console.log(certification[0].courcse_name);
+                    for (let i=0; i<certification.length; i++) {
+                       element = `<tr>
+                                  <td>${certification[i].courcse_name}</td>
+                                  <td>${certification[i].duration}</td>
+                                  <td>${certification[i].institute}</td>
+                                  <td>${certification[i].yearOfJoining}</td>
+                                  </tr>`;
+                       $("#cetification_tbody").append(element);
+                    }
+
+                    //for projects
+                    let projects = details.projects;
+                    $("#mini_pro_title").append(projects[0].title);
+                    $("#mini_pro_des").append(projects[0].abstract);
+                    $("#main_pro_title").append(projects[1].title);
+                    $("#main_pro_des").append(projects[1].abstract);
+
+
+                    //for education 
+                    let education = details.education;
+                    console.log(education[0].Course);
+                    for(i=0;i<=education.length;i++){
+                        element =  `<tr>  
+                                    <td> ${i+1} </td>
+                                    <td> ${education[i].Course} </td>
+                                    <td> ${education[i].Year} </td>
+                                    <td> ${education[i].Institute} </td>
+                                    <td> ${education[i].Percentage} </td>
+                                    </tr> `
+                        $("#edu_tab_body").append(element);
+                    }
+
+               
+                }
+            })
+        })
+    </script>
+
+    <!-- <script src="./view.js"></script> -->
+
 </body>
+
 </html>

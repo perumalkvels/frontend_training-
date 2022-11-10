@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<script>
+let companies = [ { name : 'Microsoft',foundedIn : 1975 },
+{name:'TATA', foundedIn : 1968 },
+{name:'Cognizant', foundedIn : 1994 },
+{name:'Google',foundedIn : 1998 },
+{name:'Cisco Systems',foundedIn : 1984 },
+{name:'Accenture',foundedIn : 1989 },
+{name:'IBM',foundedIn : 1980 },
+{name:'Comorins',foundedIn : 2019 },  ];
+
+ let sort = companies.sort((a,b)=>{
+    if(a.foundedIn > b.foundedIn)return 1;
+    if(a.foundedIn > b.foundedIn)return -1;
+    return 0;
+})
+console.log('Sort By Year');
+for(let val of sort){
+    console.log(`${val.foundedIn} - ${val.name} `);
+}
+</script>
+</body>
+</html>

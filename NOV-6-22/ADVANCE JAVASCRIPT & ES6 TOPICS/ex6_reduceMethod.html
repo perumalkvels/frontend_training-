@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<script>
+let person =[
+{name:'Perumal',age:24},
+{name:'Vels',age:25},
+{name:'Arumugam',age:20},
+{name:'Emperuman',age:28},
+]
+
+let totalAge = person.reduce((acc,val) => {
+    return acc=acc+val.age;
+},0)
+
+console.log(`Total of All Ages : ${totalAge}`);
+</script>
+</body>
+</html>
